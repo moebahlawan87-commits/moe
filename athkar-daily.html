@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Athkar Daily</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #2a0f1c; background: #f7eaf0; margin: 0; padding: 24px 16px;
+  }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #880e4f; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #880e4f; border-bottom: 1px solid #ead0dc; padding-bottom: 4px; }
+  .meta { color: #6e4757; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ead0dc; vertical-align: top; }
+  th { background: #f4dfe9; font-weight: 600; }
+  a { color: #880e4f; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #6e4757; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy — Athkar Daily</h1>
+<p class="meta">Last updated: 23 May 2026</p>
+
+<h2>What this app collects</h2>
+<p><strong>Athkar Daily does not collect any personal information from you.</strong> The app does not have user accounts, does not ask for your name or email, and does not record your behavior on a server we control.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>—</td></tr>
+    <tr><td>Device location (GPS)</td><td><strong>No</strong> — the app uses a manual city you select</td><td>Locally, on your device only</td></tr>
+    <tr><td>Selected city, calculation method, notification preference</td><td>Saved on your device</td><td>Local SharedPreferences</td></tr>
+    <tr><td>Tasbih counters, last-read surah</td><td>Saved on your device</td><td>Local SharedPreferences</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h2>Network connections</h2>
+<p>Athkar Daily requires an active internet connection to open. The internet is used for:</p>
+<ul>
+  <li><strong>Quran text</strong> — fetched on demand from the public, free <a href="https://alquran.cloud/api">AlQuran.cloud API</a>. The requests contain only the surah number; no identifier of you or your device is sent.</li>
+  <li><strong>Quran reciter audio</strong> — streamed on demand from AlQuran.cloud when you tap a verse. Only the ayah number and chosen reciter ID are sent.</li>
+  <li><strong>Nearby Mosques</strong> — when you open the Nearby Mosques screen, the app queries the public <a href="https://overpass-api.de">OpenStreetMap Overpass API</a> with the latitude and longitude of the city you selected (not your GPS position). No identifier of you or your device is sent.</li>
+  <li><strong>Google AdMob</strong> — to load and show ads (see "Advertising" below).</li>
+  <li><strong>Google's consent SDK (UMP)</strong> — to show the GDPR consent form for users in the EEA, the UK, and Switzerland on first launch.</li>
+</ul>
+<p>The app does not send anything you type or any personal data to any server.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> — required to load the Quran text and to show ads. The app is gated behind a "No internet connection" screen if the device is offline.</li>
+  <li><strong>Notifications</strong> — to alert you at each prayer time. Used only locally.</li>
+  <li><strong>Schedule exact alarms</strong> — to fire prayer alerts at the exact minute.</li>
+  <li><strong>Receive boot completed</strong> — to re-arm alarms after your device restarts.</li>
+  <li><strong>Vibrate</strong> — for the tasbih counter's haptic feedback.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, storage, microphone, camera, or any other sensitive permission.</p>
+
+<h2>Advertising</h2>
+<p>Athkar Daily shows ads provided by <strong>Google AdMob</strong>. Google's advertising SDKs may collect and process certain data (for example, your device's advertising identifier and approximate IP-based location) in order to serve ads and measure ad performance. This is governed by Google's policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google's Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you are in the EEA, the United Kingdom, or Switzerland, the app shows a Google-provided consent form (UMP — User Messaging Platform) on first launch.</p>
+<p>Ads are <strong>not shown</strong> on the Quran reader, the 99 Names screen, or the Qibla compass — only on the Prayer, Duas, Tasbih, and More tabs.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a "family" app on Google Play.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR · <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
