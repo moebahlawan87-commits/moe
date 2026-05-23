@@ -50,7 +50,6 @@
   <li><strong>Quran reciter audio</strong> — streamed on demand from AlQuran.cloud when you tap a verse. Only the ayah number and chosen reciter ID are sent.</li>
   <li><strong>Nearby Mosques</strong> — when you open the Nearby Mosques screen, the app queries the public <a href="https://overpass-api.de">OpenStreetMap Overpass API</a> with the latitude and longitude of the city you selected (not your GPS position). No identifier of you or your device is sent.</li>
   <li><strong>Google AdMob</strong> — to load and show ads (see "Advertising" below).</li>
-  <li><strong>Google's consent SDK (UMP)</strong> — to show the GDPR consent form for users in the EEA, the UK, and Switzerland on first launch.</li>
 </ul>
 <p>The app does not send anything you type or any personal data to any server.</p>
 
@@ -65,13 +64,13 @@
 <p>The app does <strong>not</strong> request location, contacts, storage, microphone, camera, or any other sensitive permission.</p>
 
 <h2>Advertising</h2>
-<p>Athkar Daily shows ads provided by <strong>Google AdMob</strong>. Google's advertising SDKs may collect and process certain data (for example, your device's advertising identifier and approximate IP-based location) in order to serve ads and measure ad performance. This is governed by Google's policies:</p>
+<p>Athkar Daily shows ads provided by <strong>Google AdMob</strong>. All ad requests are sent as <strong>non-personalized</strong> (the app sets <code>npa=1</code> on every request), so Google does not use behavioral profiling to target ads to you. Google's advertising SDK may still collect and process limited data (for example, your device's advertising identifier and approximate IP-based location) to serve and measure contextual ads. This is governed by Google's policies:</p>
 <ul>
   <li><a href="https://policies.google.com/privacy">Google's Privacy Policy</a></li>
   <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
 </ul>
-<p>If you are in the EEA, the United Kingdom, or Switzerland, the app shows a Google-provided consent form (UMP — User Messaging Platform) on first launch.</p>
-<p>Ads are <strong>not shown</strong> on the Quran reader, the 99 Names screen, or the Qibla compass — only on the Prayer, Duas, Tasbih, and More tabs.</p>
+<p>Because only non-personalized ads are requested, no GDPR / UK / Swiss / CCPA consent form is shown — non-personalized ads do not require user consent under those frameworks.</p>
+<p>Ads are <strong>not shown</strong> on the Quran reader, the 99 Names screen, or the Qibla compass — only on the Athkar, Prayer, and More tabs.</p>
 
 <h2>Children</h2>
 <p>This app is not directed at children under 13 and is not classified as a "family" app on Google Play.</p>
