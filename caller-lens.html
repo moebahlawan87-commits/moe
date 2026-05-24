@@ -36,7 +36,7 @@
   <tbody>
     <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
     <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
-    <tr><td>Your contacts</td><td>No &mdash; never read or uploaded</td><td>&mdash;</td></tr>
+    <tr><td>Your contacts</td><td>Optional &mdash; read on-device only if you grant READ_CONTACTS, never uploaded</td><td>&mdash;</td></tr>
     <tr><td>Your call log</td><td>No &mdash; not read</td><td>&mdash;</td></tr>
     <tr><td>Numbers you look up</td><td>Not stored or transmitted</td><td>Held only in memory while you view the result</td></tr>
     <tr><td>Your block list and local spam reports</td><td>Saved on your device only</td><td>App-private storage (deleted when you uninstall)</td></tr>
@@ -60,8 +60,9 @@
   <li><strong>Internet / network state</strong> &mdash; required to load ads.</li>
   <li><strong>Post notifications</strong> &mdash; used to show the country/carrier of an incoming call while the dialer is in the foreground. You can disable notifications from your system settings at any time.</li>
   <li><strong>Caller ID &amp; spam app role</strong> (<code>ROLE_CALL_SCREENING</code>) &mdash; an optional role that you can grant from inside the app. When granted, Android routes incoming calls through CallerLens so we can identify the country/carrier and silently reject numbers on your block list. You can revoke this role at any time from <em>Android Settings &rarr; Apps &rarr; Default apps &rarr; Caller ID &amp; spam app</em>.</li>
+  <li><strong>Read contacts</strong> (<code>READ_CONTACTS</code>) &mdash; <em>optional</em>. Only requested when you tap &ldquo;Grant access&rdquo; on the &ldquo;Match against your contacts&rdquo; card in Settings. When granted, CallerLens checks the device&rsquo;s local contacts to display the saved name of a looked-up number or an incoming caller. The contact name stays on the device &mdash; we do not upload it, sync it, or cache it off the phone. You can revoke this permission at any time from <em>Android Settings &rarr; Apps &rarr; CallerLens &rarr; Permissions</em>.</li>
 </ul>
-<p>The app does <strong>not</strong> request the call-log, contacts, microphone, location, or phone-state permissions. We chose <code>ROLE_CALL_SCREENING</code> over the broader default-dialer role specifically because it does not require those permissions.</p>
+<p>The app does <strong>not</strong> request the call-log, microphone, location, or phone-state permissions. We chose <code>ROLE_CALL_SCREENING</code> over the broader default-dialer role specifically because it does not require those permissions. Contacts access is strictly opt-in and used only for on-device matching &mdash; we do <strong>not</strong> upload contact books to build a reverse-phone directory (the practice that distinguishes CallerLens from apps like Truecaller).</p>
 
 <h2>Advertising</h2>
 <p>CallerLens shows ads provided by <strong>Google AdMob</strong>. Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier, IP address, and approximate IP-based location &mdash; to serve and measure ads. Ads are loaded only when the device has an internet connection.</p>
