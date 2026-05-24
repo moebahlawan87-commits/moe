@@ -27,7 +27,7 @@
 <body>
 <main>
 <h1>Privacy Policy &mdash; Kido Walls</h1>
-<p class="meta">Last updated: 24 May 2026 (v1.0)</p>
+<p class="meta">Last updated: 24 May 2026 (v1.3 — added adult-mode Pixabay search)</p>
 
 <div class="callout">
   <strong>Kido Walls is a mixed-audience app.</strong> The first time you open it, a grown-up picks whether the person using the device is <strong>under 13</strong> (kid-safe mode) or <strong>13 or older</strong> (standard mode). This choice changes which kinds of ads can be shown. You can change it any time from the About tab.
@@ -48,7 +48,17 @@
 </table>
 
 <h2>How wallpapers are made</h2>
-<p>Every wallpaper in Kido Walls is <strong>drawn on your device</strong> from gradients, simple shapes, and system emoji characters. The app ships with no third-party photos, no copyrighted characters, and no images downloaded from the internet. When you tap Home / Lock / Both, the wallpaper bitmap is composed in memory and handed straight to Android&rsquo;s <code>WallpaperManager</code> &mdash; it never leaves your device.</p>
+<p>Every <em>bundled</em> wallpaper in Kido Walls is <strong>drawn on your device</strong> from gradients, simple shapes, and system emoji characters. The app ships with no third-party photos and no copyrighted characters. When you tap Home / Lock / Both on a bundled wallpaper, the bitmap is composed in memory and handed straight to Android&rsquo;s <code>WallpaperManager</code> &mdash; it never leaves your device.</p>
+
+<h2>Online image search (adult mode only)</h2>
+<p>When the app is in <strong>standard (13 or older) mode</strong>, the Search tab includes an <em>Online</em> toggle that lets you browse royalty-free photos from <a href="https://pixabay.com">Pixabay</a>. When you type a query, tap a suggestion chip, or tap a colour swatch, the app sends:</p>
+<ul>
+  <li>the words you typed (or the suggestion you tapped) and the colour name (if any) to <code>https://pixabay.com/api/</code>;</li>
+  <li>standard HTTP request headers added by the Android networking stack (e.g. your IP address, used by Pixabay to apply rate-limits);</li>
+  <li><code>safesearch=true</code> on every request &mdash; Pixabay filters out adult content from results.</li>
+</ul>
+<p>Your search history is <strong>not</strong> stored anywhere &mdash; not on your device, not on a Kido Walls server. Pixabay&rsquo;s handling of the data they receive is governed by <a href="https://pixabay.com/service/privacy/">Pixabay&rsquo;s Privacy Policy</a>. Each thumbnail loaded from Pixabay shows the photographer&rsquo;s username; tapping &ldquo;Apply&rdquo; downloads the larger image and hands it to Android&rsquo;s <code>WallpaperManager</code> &mdash; the image is not re-uploaded anywhere.</p>
+<p><strong>In kid-safe (under 13) mode this entire feature is hidden.</strong> No request is ever made to Pixabay while the device is in kid-safe mode, because Pixabay&rsquo;s catalogue is not certified for under-13 audiences under Google Play&rsquo;s Families Policy.</p>
 
 <h2>Network connections</h2>
 <p>The internet is only used to load ads through Google AdMob (see &ldquo;Advertising&rdquo; below) and to show Google&rsquo;s privacy / consent screen in regions that require it. No wallpaper data, no favorites, and no usage data are sent over the network.</p>
