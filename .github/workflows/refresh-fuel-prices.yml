@@ -1,0 +1,46 @@
+name: Refresh fuel prices
+
+# Runs every day at 06:15 UTC (≈ 09:15 Beirut, 02:15 New York). The
+# GlobalPetrolPrices source republishes weekly, but a daily cron means
+# users see fresh data within ~24h of any source change. Also runnable
+# on demand via the Actions tab → "Run workflow".
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+# Allow the workflow to commit back to the repo (uses the built-in
+# GITHUB_TOKEN — no PAT required).
+permissions:
+  contents: write
+
+concurrency:
+  group: fuel-prices-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh JSON
+        run: python scripts/refresh-fuel-prices.py
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain fuel-prices-world.json)" ]; then
+            echo "No price changes since previous run — skipping commit."
+            exit 0
+          fi
+          git config user.name  "Fuel Prices Bot"
+          git config user.email "fuelprices-bot@users.noreply.github.com"
+          git add fuel-prices-world.json
+          git commit -m "FuelPricesWorld: daily refresh $(date -u +%Y-%m-%d)"
+          git push
