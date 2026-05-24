@@ -26,7 +26,7 @@
 <body>
 <main>
 <h1>Privacy Policy &mdash; WallForge</h1>
-<p class="meta">Last updated: 24 May 2026</p>
+<p class="meta">Last updated: 24 May 2026 (v1.6 &mdash; added Pixabay image search disclosure)</p>
 
 <h2>What this app collects</h2>
 <p><strong>WallForge does not collect any personal information from you.</strong> The app does not have user accounts, does not ask for your name or email, and does not record your behavior on a server we control.</p>
@@ -37,6 +37,7 @@
     <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
     <tr><td>Photos picked in Studio</td><td>Processed locally only</td><td>Never uploaded; passed to <code>WallpaperManager</code> on your device</td></tr>
     <tr><td>Motion-wallpaper preset choice</td><td>Saved on your device</td><td>Local SharedPreferences</td></tr>
+    <tr><td>Image-search queries (Search tab)</td><td>Sent to Pixabay only when you search</td><td>Not retained by WallForge; Pixabay handles per their policy</td></tr>
     <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
   </tbody>
 </table>
@@ -45,7 +46,16 @@
 <p>In the Studio tab you can pick a photo from your device, add an optional caption, and apply a tint or overlay. The chosen image is decoded and composited <strong>on your device only</strong>. The result is handed to Android&rsquo;s <code>WallpaperManager</code> when you tap Home / Lock / Both. WallForge never uploads your photos to any server.</p>
 
 <h2>Network connections</h2>
-<p>All wallpaper rendering, photo editing, and live wallpaper animation runs on your device. The internet is used only by Google AdMob to load ads (see &ldquo;Advertising&rdquo; below). The app requires an active internet connection to open so that ads can be requested &mdash; you will see a &ldquo;No internet connection&rdquo; screen when offline.</p>
+<p>All wallpaper rendering, photo editing, and live wallpaper animation runs on your device. The internet is used for: (1) Google AdMob to load ads (see &ldquo;Advertising&rdquo; below), and (2) when you use the Search tab, sending your typed query and selected colour filter to the Pixabay image API (see &ldquo;Image search (Pixabay)&rdquo; below). The app requires an active internet connection to open &mdash; you will see a &ldquo;No internet connection&rdquo; screen when offline.</p>
+
+<h2>Image search (Pixabay)</h2>
+<p>The Search tab lets you browse royalty-free wallpapers from <a href="https://pixabay.com">Pixabay</a>. When you type a query or tap a chip / colour swatch, the app sends:</p>
+<ul>
+  <li>the words you typed (or the chip / suggestion you tapped) and the colour name (if any) to <code>https://pixabay.com/api/</code>;</li>
+  <li>standard HTTP request headers added by the Android networking stack (e.g. your IP address, used by Pixabay to apply rate-limits).</li>
+</ul>
+<p>Your search history is <strong>not</strong> stored anywhere &mdash; not on your device, not on a WallForge server. Pixabay&rsquo;s handling of the data they receive is governed by <a href="https://pixabay.com/service/privacy/">Pixabay&rsquo;s Privacy Policy</a>. Each thumbnail loaded from Pixabay shows the photographer&rsquo;s username; tapping &ldquo;Apply&rdquo; downloads the larger image and hands it to Android&rsquo;s <code>WallpaperManager</code> &mdash; the image is not re-uploaded anywhere.</p>
+<p>A small set of curated photos shipped inside the app under the Gallery tab&rsquo;s &ldquo;2D&rdquo; and &ldquo;3D&rdquo; categories are royalty-free Pixabay images bundled at build time. They are not fetched at runtime and use no network when applied. Photographer credit is shown on the preview screen.</p>
 
 <h2>Permissions the app requests</h2>
 <ul>
