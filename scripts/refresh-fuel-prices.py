@@ -31,6 +31,8 @@ from datetime import datetime, timezone
 
 GASOLINE_URL = "https://www.globalpetrolprices.com/gasoline_prices/"
 DIESEL_URL = "https://www.globalpetrolprices.com/diesel_prices/"
+FX_URL = "https://open.er-api.com/v6/latest/USD"
+IPT_LEBANON_URL = "https://www.iptgroup.com.lb/ipt/en/our-stations/fuel-prices"
 
 USER_AGENT = (
     "Mozilla/5.0 (compatible; FuelPricesWorld-Refresh/1.0; "
@@ -244,6 +246,79 @@ def fetch(url: str) -> str:
         return r.read().decode("utf-8", errors="replace")
 
 
+# ---------------------------------------------------------------------------
+# Per-country overrides — applied on top of the GPP baseline. Use when GPP
+# significantly diverges from local pump prices (typical for markets with
+# unusual FX dynamics or government-subsidised pricing). Each override
+# returns (gas_primary_usd, diesel_usd, [(grade_name, usd), ...]) or None
+# when the fetch fails (in which case we fall back to the GPP value so the
+# country is never dropped).
+# ---------------------------------------------------------------------------
+
+def _fx_lbp_per_usd() -> float | None:
+    """Return today's LBP-per-USD rate from open.er-api.com (free, no key)."""
+    try:
+        data = json.loads(fetch(FX_URL))
+        return float(data["rates"]["LBP"])
+    except Exception as e:
+        print(f"  WARN: FX fetch failed ({e}), Lebanon override skipped",
+              file=sys.stderr)
+        return None
+
+
+def override_lebanon() -> tuple[float, float, list[tuple[str, float]]] | None:
+    """Lebanon prices direct from IPT's price page (mirrors the MoEW
+    daily decree). Prices on the page are in LBP per 20-litre tanake;
+    we divide by 20 then convert via the live LBP/USD rate."""
+    try:
+        html = fetch(IPT_LEBANON_URL)
+    except Exception as e:
+        print(f"  WARN: IPT fetch failed ({e})", file=sys.stderr)
+        return None
+
+    # Each price appears in the HTML in "X,XXX,XXX" form near a label.
+    def grab(label: str) -> float | None:
+        # Search for the label and the first comma-numeric value within
+        # ~500 chars after it.
+        m = re.search(
+            rf"{re.escape(label)}[\s\S]{{0,800}}?([0-9]{{1,3}}(?:,[0-9]{{3}})+)",
+            html, re.IGNORECASE,
+        )
+        if not m:
+            return None
+        try:
+            return float(m.group(1).replace(",", "")) / 20.0  # tanake → litre
+        except ValueError:
+            return None
+
+    lbp95 = grab("UNL 95") or grab("SP95") or grab("95")
+    lbp98 = grab("UNL 98") or grab("SP98") or grab("98")
+    lbpdsl = grab("Diesel") or grab("Gas oil")
+
+    if not (lbp95 and lbp98 and lbpdsl):
+        print(f"  WARN: IPT parse incomplete (95={lbp95},98={lbp98},dsl={lbpdsl})",
+              file=sys.stderr)
+        return None
+
+    fx = _fx_lbp_per_usd()
+    if not fx or fx <= 0:
+        return None
+
+    g95 = round(lbp95 / fx, 3)
+    g98 = round(lbp98 / fx, 3)
+    diesel = round(lbpdsl / fx, 3)
+    return g95, diesel, [
+        ("95 octane", g95),
+        ("98 octane", g98),
+    ]
+
+
+# ISO → callable returning (primary_gas_usd, diesel_usd, [(grade, usd)]).
+OVERRIDES: dict[str, callable] = {
+    "LB": override_lebanon,
+}
+
+
 def parse_country_prices(html: str, fuel: str) -> tuple[dict[str, float], str | None]:
     """GlobalPetrolPrices renders each row as two separate absolutely-
     positioned divs: a country anchor like <a href='/Lebanon/{fuel}_prices/'>
@@ -308,6 +383,7 @@ def build_payload(
 ) -> dict:
     countries = []
     missing: list[str] = []
+    overridden: list[str] = []
     for iso, (flag, name, region, currency) in META.items():
         gas = gas_by_iso.get(iso)
         diesel = diesel_by_iso.get(iso)
@@ -318,6 +394,35 @@ def build_payload(
                 continue
             gas = gas if gas is not None else fb[0]
             diesel = diesel if diesel is not None else fb[1]
+
+        # Default: use the multi-grade overlay template if defined.
+        tmpl = GRADE_TEMPLATES.get(iso)
+        grades_for_row: list[dict] | None = None
+        if tmpl:
+            grades_for_row = [
+                {"name": g, "usdPerL": round(gas * mult, 3)}
+                for (g, mult) in tmpl
+            ]
+
+        # Country-specific override (e.g. Lebanon → IPT + FX). Replaces
+        # both the GPP-derived primary and the template-derived grades.
+        ov = OVERRIDES.get(iso)
+        if ov is not None:
+            try:
+                result = ov()
+            except Exception as e:
+                print(f"  WARN: override for {iso} raised ({e}) — "
+                      "falling back to GPP", file=sys.stderr)
+                result = None
+            if result is not None:
+                ov_gas, ov_diesel, ov_grades = result
+                gas = ov_gas
+                diesel = ov_diesel
+                grades_for_row = [
+                    {"name": n, "usdPerL": round(v, 3)} for (n, v) in ov_grades
+                ]
+                overridden.append(iso)
+
         row = {
             "code": iso,
             "flag": flag,
@@ -327,25 +432,26 @@ def build_payload(
             "gasolineUsdPerL": round(gas, 3),
             "dieselUsdPerL": round(diesel, 3),
         }
-        tmpl = GRADE_TEMPLATES.get(iso)
-        if tmpl:
-            row["gasolineGrades"] = [
-                {"name": g, "usdPerL": round(gas * mult, 3)}
-                for (g, mult) in tmpl
-            ]
+        if grades_for_row:
+            row["gasolineGrades"] = grades_for_row
         countries.append(row)
     if missing:
         print(f"WARN: missing data for {missing}", file=sys.stderr)
+    if overridden:
+        print(f"  applied per-country overrides: {overridden}")
     return {
         "schema": 2,
         "app": "FuelPricesWorld",
         "lastUpdated": src_date,
         "source": (
-            "GlobalPetrolPrices.com weekly retail price index (fetched daily "
-            "by the FuelPricesWorld refresh workflow). Multi-grade overlays "
-            "are anchored to each country's primary grade with industry-"
-            "standard premium uplifts. Indicative figures — actual "
-            "pump prices vary by region, brand, and day."
+            "Baseline: GlobalPetrolPrices.com weekly retail price index. "
+            "Country overrides applied when a better local source is "
+            "available — Lebanon: IPT Lebanon (mirrors MoEW daily decree) "
+            "converted via live LBP/USD from open.er-api.com. Fetched daily "
+            "by the FuelPricesWorld refresh workflow. Multi-grade overlays "
+            "without an override are anchored to each country's primary "
+            "grade with industry-standard premium uplifts. Indicative "
+            "figures — actual pump prices vary by region, brand, and day."
         ),
         "countries": countries,
     }

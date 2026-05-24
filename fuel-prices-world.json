@@ -2,7 +2,7 @@
   "schema": 2,
   "app": "FuelPricesWorld",
   "lastUpdated": "2026-05-18",
-  "source": "GlobalPetrolPrices.com weekly retail price index (fetched daily by the FuelPricesWorld refresh workflow). Multi-grade overlays are anchored to each country's primary grade with industry-standard premium uplifts. Indicative figures — actual pump prices vary by region, brand, and day.",
+  "source": "Baseline: GlobalPetrolPrices.com weekly retail price index. Country overrides applied when a better local source is available — Lebanon: IPT Lebanon (mirrors MoEW daily decree) converted via live LBP/USD from open.er-api.com. Fetched daily by the FuelPricesWorld refresh workflow. Multi-grade overlays without an override are anchored to each country's primary grade with industry-standard premium uplifts. Indicative figures — actual pump prices vary by region, brand, and day.",
   "countries": [
     {"code":"DZ","flag":"🇩🇿","name":"Algeria","region":"Africa","currency":"DZD","gasolineUsdPerL":0.354,"dieselUsdPerL":0.233},
     {"code":"AO","flag":"🇦🇴","name":"Angola","region":"Africa","currency":"AOA","gasolineUsdPerL":0.327,"dieselUsdPerL":0.436},
@@ -92,7 +92,7 @@
     {"code":"IL","flag":"🇮🇱","name":"Israel","region":"Middle East","currency":"ILS","gasolineUsdPerL":2.841,"dieselUsdPerL":2.697,"gasolineGrades":[{"name":"95 octane","usdPerL":2.841},{"name":"98 octane","usdPerL":3.091}]},
     {"code":"JO","flag":"🇯🇴","name":"Jordan","region":"Middle East","currency":"JOD","gasolineUsdPerL":1.848,"dieselUsdPerL":1.114,"gasolineGrades":[{"name":"90 octane","usdPerL":1.709},{"name":"95 octane","usdPerL":1.848},{"name":"98 octane","usdPerL":2.051}]},
     {"code":"KW","flag":"🇰🇼","name":"Kuwait","region":"Middle East","currency":"KWD","gasolineUsdPerL":0.34,"dieselUsdPerL":0.372,"gasolineGrades":[{"name":"Regular 91","usdPerL":0.305},{"name":"Premium 95","usdPerL":0.34},{"name":"Ultra 98","usdPerL":0.378}]},
-    {"code":"LB","flag":"🇱🇧","name":"Lebanon","region":"Middle East","currency":"LBP","gasolineUsdPerL":1.299,"dieselUsdPerL":1.139,"gasolineGrades":[{"name":"95 octane","usdPerL":1.299},{"name":"98 octane","usdPerL":1.406}]},
+    {"code":"LB","flag":"🇱🇧","name":"Lebanon","region":"Middle East","currency":"LBP","gasolineUsdPerL":1.444,"dieselUsdPerL":1.242,"gasolineGrades":[{"name":"95 octane","usdPerL":1.444},{"name":"98 octane","usdPerL":1.454}]},
     {"code":"OM","flag":"🇴🇲","name":"Oman","region":"Middle East","currency":"OMR","gasolineUsdPerL":0.622,"dieselUsdPerL":0.671,"gasolineGrades":[{"name":"M91","usdPerL":0.598},{"name":"M95","usdPerL":0.622},{"name":"M98","usdPerL":0.681}]},
     {"code":"QA","flag":"🇶🇦","name":"Qatar","region":"Middle East","currency":"QAR","gasolineUsdPerL":0.576,"dieselUsdPerL":0.562,"gasolineGrades":[{"name":"Super 91","usdPerL":0.537},{"name":"Plus 95","usdPerL":0.576},{"name":"Premium 98","usdPerL":0.643}]},
     {"code":"SA","flag":"🇸🇦","name":"Saudi Arabia","region":"Middle East","currency":"SAR","gasolineUsdPerL":0.621,"dieselUsdPerL":0.477,"gasolineGrades":[{"name":"91 octane","usdPerL":0.56},{"name":"95 octane","usdPerL":0.621}]},
