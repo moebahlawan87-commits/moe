@@ -376,6 +376,26 @@ def map_to_iso(scraped: dict[str, float]) -> dict[str, float]:
     return out
 
 
+def _all_fx_rates() -> tuple[dict[str, float], str | None]:
+    """Fetch USD → all currencies in one call. Returns (rates, asOfDate)."""
+    try:
+        data = json.loads(fetch(FX_URL))
+        raw = data.get("rates", {}) or {}
+        rates = {k: float(v) for k, v in raw.items() if isinstance(v, (int, float))}
+        # Time stamp is e.g. "Sat, 24 May 2026 00:00:01 +0000"
+        ts = data.get("time_last_update_utc")
+        as_of = None
+        if ts:
+            try:
+                as_of = datetime.strptime(ts, "%a, %d %b %Y %H:%M:%S %z").strftime("%Y-%m-%d")
+            except Exception:
+                as_of = None
+        return rates, as_of
+    except Exception as e:
+        print(f"  WARN: FX rates fetch failed ({e})", file=sys.stderr)
+        return {}, None
+
+
 def build_payload(
     gas_by_iso: dict[str, float],
     diesel_by_iso: dict[str, float],
@@ -439,6 +459,8 @@ def build_payload(
         print(f"WARN: missing data for {missing}", file=sys.stderr)
     if overridden:
         print(f"  applied per-country overrides: {overridden}")
+    fx_rates, fx_date = _all_fx_rates()
+    print(f"  fetched {len(fx_rates)} FX rates (as-of {fx_date})")
     return {
         "schema": 2,
         "app": "FuelPricesWorld",
@@ -454,6 +476,8 @@ def build_payload(
             "figures — actual pump prices vary by region, brand, and day."
         ),
         "countries": countries,
+        "fxRatesAsOf": fx_date or src_date,
+        "fxRatesUsdTo": {k: round(v, 6) for k, v in sorted(fx_rates.items())},
     }
 
 
@@ -500,7 +524,11 @@ def main() -> int:
         compact = json.dumps(c, ensure_ascii=False, separators=(",", ":"))
         rows.append("    " + compact)
     lines.append(",\n".join(rows))
-    lines.append("  ]")
+    lines.append("  ],")
+    lines.append(f'  "fxRatesAsOf": "{payload["fxRatesAsOf"]}",')
+    lines.append('  "fxRatesUsdTo": ' + json.dumps(
+        payload["fxRatesUsdTo"], ensure_ascii=False, separators=(",", ":")
+    ))
     lines.append("}")
     text = "\n".join(lines) + "\n"
 
