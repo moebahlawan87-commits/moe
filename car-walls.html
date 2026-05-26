@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; CarWalls</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #f7f7f9; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #c0392b; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #c0392b; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #c0392b; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; CarWalls</h1>
+<p class="meta">Last updated: 26 May 2026 (v1.0)</p>
+
+<h2>What this app collects</h2>
+<p><strong>CarWalls does not collect any personal information from you.</strong> The app does not have user accounts, does not ask for your name or email, and does not record your behaviour on a server we control.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>AI search prompts (AI Search tab)</td><td>Sent to Pollinations.AI when you tap Generate</td><td>Not retained by CarWalls; Pollinations handles per their policy</td></tr>
+    <tr><td>Generated AI image</td><td>Created on Pollinations servers, returned to your device</td><td>Held in app memory until you re-roll or close the screen</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>Wallpapers shipped with the app</h2>
+<p>The Featured and Brands tabs show artwork that was AI-generated at build time and bundled inside the app. These wallpapers are loaded from local files on your device &mdash; no network call is made when you browse the gallery or apply one of them as a wallpaper.</p>
+<p>The AI artwork is stylised: it does not use any real photograph or trademarked logo from any car manufacturer. CarWalls is <strong>not affiliated with, endorsed by, or sponsored by</strong> any car manufacturer or brand named in the catalogue. Brand names are used only to indicate the styling theme of the AI artwork.</p>
+
+<h2>AI Search (Pollinations.AI)</h2>
+<p>The AI Search tab lets you type a car-related prompt and generate a fresh wallpaper. When you tap Generate (or a suggestion chip), the app sends:</p>
+<ul>
+  <li>your typed prompt (with a fixed style suffix appended) to <code>https://image.pollinations.ai/prompt/&hellip;</code>;</li>
+  <li>standard HTTP request headers added by the Android networking stack (e.g. your IP address, used by Pollinations for rate-limiting).</li>
+</ul>
+<p>Your prompt history is <strong>not</strong> stored anywhere &mdash; not on your device, not on a CarWalls server. Pollinations.AI&rsquo;s handling of the data they receive is governed by <a href="https://pollinations.ai/">Pollinations&rsquo;s site terms</a>. The returned image is held in your phone&rsquo;s memory while you preview it; tapping Apply hands it to Android&rsquo;s <code>WallpaperManager</code> &mdash; the image is not re-uploaded anywhere.</p>
+
+<h2>Network connections</h2>
+<p>All wallpaper rendering and applying runs on your device. The internet is used for: (1) Google AdMob to load ads (see &ldquo;Advertising&rdquo; below), and (2) when you use the AI Search tab, sending your typed prompt to the Pollinations.AI image service. The app requires an active internet connection to open &mdash; you will see a &ldquo;No internet connection&rdquo; screen when offline.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required to request ads and to call Pollinations.AI from the AI Search tab.</li>
+  <li><strong>Set wallpaper</strong> &mdash; required to install your chosen wallpaper on the Home / Lock screen via Android&rsquo;s system <code>WallpaperManager</code>.</li>
+  <li><strong>Write external storage</strong> (Android 9 and below only, <code>android:maxSdkVersion=&quot;28&quot;</code>) &mdash; legacy permission required only on older Android versions for the wallpaper decode path.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, camera, notifications, or any other sensitive permission.</p>
+
+<h2>Advertising</h2>
+<p>CarWalls shows ads provided by <strong>Google AdMob</strong> (banner, interstitial, app-open, and rewarded formats). The rewarded format is used to gate AI Search generations &mdash; you choose to watch a short ad in order to generate an AI wallpaper. Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) or sets <code>npa=1</code> (non-personalized ads) so it stays compliant with GDPR / UK GDPR / CCPA.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a &ldquo;family&rdquo; app on Google Play.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
