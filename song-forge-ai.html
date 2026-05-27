@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy &mdash; SongForge AI</title>
+<title>Privacy Policy &mdash; AI Songs Generating</title>
 <style>
   :root { color-scheme: light; }
   html { -webkit-text-size-adjust: 100%; }
@@ -25,17 +25,18 @@
 </head>
 <body>
 <main>
-<h1>Privacy Policy &mdash; SongForge AI</h1>
-<p class="meta">Last updated: 27 May 2026 (v1.0)</p>
+<h1>Privacy Policy &mdash; AI Songs Generating</h1>
+<p class="meta">Last updated: 27 May 2026 (v1.1)</p>
 
 <h2>What this app collects</h2>
-<p><strong>SongForge AI does not collect any personal information from you.</strong> The app has no user accounts, does not ask for your name or email, and does not record your behavior on a server we control.</p>
+<p><strong>AI Songs Generating does not collect any personal information from you.</strong> The app has no user accounts, does not ask for your name or email, and does not record your behavior on a server we control.</p>
 <table>
   <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
   <tbody>
     <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
     <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
-    <tr><td>Microphone / camera audio or video</td><td>No (app never reads your mic or camera)</td><td>&mdash;</td></tr>
+    <tr><td>Microphone audio</td><td>Only when you tap Record My Voice</td><td>App&rsquo;s private filesDir &mdash; never uploaded</td></tr>
+    <tr><td>Camera audio or video</td><td>No (app never reads your camera)</td><td>&mdash;</td></tr>
     <tr><td>Song-generation choices (mood / style / topic / language)</td><td>Sent to third-party AI endpoints &mdash; see below</td><td>Not stored by us</td></tr>
     <tr><td>Generated lyrics, cover images, and beats</td><td>Saved on your device only</td><td>App&rsquo;s private cache &amp; files folder</td></tr>
     <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
@@ -52,7 +53,10 @@
 <p>The app does <strong>not</strong> attach your name, email, device ID, or any other identifier to the prompts. If a network call fails, the app falls back to a deterministic on-device template so the feature still works.</p>
 
 <h2>The &ldquo;Sing&rdquo; feature</h2>
-<p>The vocal you hear when you tap <strong>Sing</strong> is your phone&rsquo;s built-in <strong>text-to-speech (TTS)</strong> engine reciting the lyrics &mdash; it is <em>not</em> a hosted AI singing model. The TTS engine runs entirely on your device. No audio is recorded, uploaded, or shared.</p>
+<p>The vocal you hear when you tap <strong>Sing</strong> is your phone&rsquo;s built-in <strong>text-to-speech (TTS)</strong> engine reciting the lyrics &mdash; it is <em>not</em> a hosted AI singing model. The TTS engine runs entirely on your device. No audio is uploaded or shared. If the TTS voice for your chosen language is not installed, the app falls back to your phone&rsquo;s default voice and shows a hint to install the missing voice from Android Settings.</p>
+
+<h2>The &ldquo;Record My Voice&rdquo; feature</h2>
+<p>If you tap <strong>Record My Voice</strong>, the app asks for microphone permission and records up to 60 seconds of audio. The recording is saved <strong>only on your device</strong> (in the app&rsquo;s private storage) and is layered over the on-device backing beat when you tap <strong>My Voice</strong>. Recordings are <em>never</em> uploaded, sent to any server, or shared automatically. They are deleted when you delete the song from History or uninstall the app. You can revoke microphone permission at any time from Android&rsquo;s app settings.</p>
 
 <h2>Network connections</h2>
 <p>The internet is used for: loading ads via Google AdMob (see &ldquo;Advertising&rdquo; below), and sending the prompt to Pollinations when you tap Generate. The app requires an active internet connection to open &mdash; you will see a &ldquo;No internet connection&rdquo; screen when offline.</p>
@@ -60,14 +64,15 @@
 <h2>Permissions the app requests</h2>
 <ul>
   <li><strong>Internet / network state</strong> &mdash; required to request ads and call the Pollinations endpoints.</li>
+  <li><strong>Microphone (<code>RECORD_AUDIO</code>)</strong> &mdash; only requested the first time you tap <strong>Record My Voice</strong>. Used solely to capture the audio you record into a local file. Not used for any background recording.</li>
 </ul>
-<p>The app does <strong>not</strong> request location, contacts, microphone, camera, gallery access, or any other sensitive permission.</p>
+<p>The app does <strong>not</strong> request location, contacts, camera, gallery access, or any other sensitive permission.</p>
 
 <h2>What about AI-generated lyrics and ownership?</h2>
-<p>Lyrics returned by Pollinations are AI-generated originals. Because large language models train on the public web, generated lyrics may occasionally resemble existing works. <strong>Review any song you intend to publish</strong> (release, livestream, monetised video, etc.) before using it commercially. SongForge AI grants no warranty of originality or non-infringement on the AI output.</p>
+<p>Lyrics returned by Pollinations are AI-generated originals. Because large language models train on the public web, generated lyrics may occasionally resemble existing works. <strong>Review any song you intend to publish</strong> (release, livestream, monetised video, etc.) before using it commercially. AI Songs Generating grants no warranty of originality or non-infringement on the AI output.</p>
 
 <h2>Advertising</h2>
-<p>SongForge AI shows ads provided by <strong>Google AdMob</strong> in four formats: banner (small strip at the bottom of every screen), interstitial (occasional full-screen ad after a few song generations), rewarded (optional full-screen ad in exchange for more generations past the free limit), and app-open (full-screen ad when you bring the app back to the foreground). Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<p>AI Songs Generating shows ads provided by <strong>Google AdMob</strong> in four formats: banner (small strip at the bottom of every screen), interstitial (occasional full-screen ad after a few song generations), rewarded (optional full-screen ad in exchange for more generations past the free limit), and app-open (full-screen ad when you bring the app back to the foreground). Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
 <ul>
   <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
   <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
