@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; WorldPulse</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #14201d; background: #0b1740; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #fffdf8; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #1e3a8a; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #1e3a8a; border-bottom: 1px solid #e7ddc8; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e7ddc8; vertical-align: top; }
+  th { background: #f3ece0; font-weight: 600; }
+  a { color: #1e3a8a; }
+  code { background: #f3ece0; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #cbd5cf; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; WorldPulse</h1>
+<p class="meta">Last updated: 31 May 2026 (v1.0)</p>
+
+<h2>What this app is (and is not)</h2>
+<p>WorldPulse is an independent news <em>reader</em> that pulls publicly available RSS feeds from many of the world&rsquo;s most-read news outlets and lets you browse headlines either by country (via Google News country editions) or directly by outlet (BBC, The Guardian, Al Jazeera, CNN, The New York Times, NPR, Reuters, NHK, Deutsche Welle, Le Monde, France 24, NDTV, Times of India, The Hindu, Straits Times, ABC News Australia, Arab News, The National, News24, CBC and others). When you open an article, it loads inside Android&rsquo;s Chrome Custom Tabs in a window that visually matches WorldPulse but is served by Chrome directly from the outlet&rsquo;s own website. <strong>WorldPulse is not affiliated with, endorsed by, or sponsored by any of the news outlets it links to.</strong> All outlet names, logos, and trademarks belong to their respective owners.</p>
+
+<h2>What this app collects</h2>
+<p><strong>WorldPulse does not collect any personal information from you.</strong> There are no user accounts, no sign-in, and no server we control that stores your activity.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Contacts, camera, microphone</td><td>No &mdash; the app does not request these permissions</td><td>&mdash;</td></tr>
+    <tr><td>Selected country, outlet, category</td><td>Yes &mdash; remembered so the feed opens where you left off</td><td>App-private SharedPreferences on this device only</td></tr>
+    <tr><td>Bookmarks (saved articles)</td><td>Yes &mdash; titles, sources, URLs you tap &ldquo;Save&rdquo; on</td><td>App-private SharedPreferences on this device only</td></tr>
+    <tr><td>Reading history (last 30 articles you opened)</td><td>Yes &mdash; same fields as bookmarks</td><td>App-private SharedPreferences on this device only; clearable from Recently read</td></tr>
+    <tr><td>Search text you type</td><td>Used only to filter the currently loaded feed in memory; never sent anywhere</td><td>Not stored</td></tr>
+    <tr><td>Text you send to the AI Summary / AI Translate features</td><td>The article&rsquo;s headline + snippet + URL is sent to the Pollinations.ai text endpoint (a third-party AI service) to generate a summary or translation</td><td>Pollinations.ai processes the request and returns a response; please review their terms before using these optional features</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>How article loading works</h2>
+<p>Headlines, sources, dates, snippets, and article links come from the publicly available RSS / Atom feeds the outlets themselves publish. WorldPulse fetches those feeds directly from the outlet (e.g. <code>feeds.bbci.co.uk</code>, <code>rss.nytimes.com</code>), parses the XML on your device, and shows the items. Tapping an article opens it in <strong>Chrome Custom Tabs</strong>, which loads the outlet&rsquo;s full page from the outlet&rsquo;s own server &mdash; the same content you would get by typing the URL into Chrome. WorldPulse does <strong>not</strong> inject scripts into those pages and does <strong>not</strong> read your cookies, login credentials, session tokens, or anything else you do on them. Outside the app, the outlet&rsquo;s and Chrome&rsquo;s own privacy policies apply.</p>
+
+<h2>The optional AI features</h2>
+<p>&ldquo;AI Summary&rdquo; (a 3-bullet summary of the selected article) and &ldquo;AI Translate&rdquo; (translation of the headline + snippet into a chosen language) send the headline, snippet, and article URL to the public <a href="https://text.pollinations.ai/">Pollinations.ai</a> text endpoint to generate the response. No identifier of yours is attached. The system prompt that WorldPulse sends instructs the AI to treat the article copy as data (not instructions) and to refuse harmful, illegal, hateful, or sexual content. Each user gets a small number of free AI uses; further uses require watching a rewarded ad. Both AI features are optional &mdash; if you never tap &ldquo;Summarize&rdquo; or &ldquo;Translate&rdquo;, no article text ever leaves your device.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required to fetch RSS feeds, load article pages in Chrome Custom Tabs, request ads, and run the optional AI features. The app shows a &ldquo;You&rsquo;re offline&rdquo; screen when there is no connection.</li>
+</ul>
+<p>The app does <strong>not</strong> request contacts, location, microphone, camera, storage, exact-alarms, foreground-services, or any other sensitive permission.</p>
+
+<h2>Advertising</h2>
+<p>WorldPulse shows ads provided by <strong>Google AdMob</strong> in four formats: banner (a small strip above the feed), interstitial (an occasional full-screen ad after several article opens, paced gently), app-open (a full-screen ad when you bring the app back to the foreground &mdash; never on the first launch, per Play policy), and rewarded (an optional full-screen ad you choose to watch to unlock additional uses of AI Summary or AI Translate). Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) and you can re-open the consent form from <em>Settings &rarr; Ad privacy options</em>.</p>
+
+<h2>News content disclaimer</h2>
+<p>Headlines and article excerpts are produced by the third-party outlets WorldPulse links to. Their accuracy, framing, and editorial decisions are entirely the outlets&rsquo; responsibility &mdash; WorldPulse does not edit or curate them beyond grouping them by country and category. AI-generated summaries and translations are best-effort and may contain errors; always read the original article on the outlet&rsquo;s site for the authoritative version.</p>
+
+<h2>Children</h2>
+<p>WorldPulse is intended for general adult news readers. News content can include reporting on violence, crime, war, politics, and other adult subject matter chosen by the third-party outlets. The AdMob ad content is mixed-audience. The app is not designed for children.</p>
+
+<h2>Trademark notice</h2>
+<p>BBC, The Guardian, Al Jazeera, CNN, The New York Times, NPR, Reuters, Associated Press, The Verge, TechCrunch, Ars Technica, Wired, Hacker News, Deutsche Welle, Der Spiegel, Le Monde, France 24, Euronews, Sky News, The Independent, NHK, The Japan Times, South China Morning Post, NDTV, Times of India, The Hindu, The Straits Times, ABC News (Australia), Arab News, The National, Daily News Egypt, News24, CBC, Global News, Buenos Aires Times, and all other named news outlets are trademarks of their respective owners. Their inclusion in this directory is nominative &mdash; WorldPulse helps you reach those public RSS feeds and is not affiliated with, endorsed by, or sponsored by any of them.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
