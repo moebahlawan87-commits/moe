@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; CargoLink</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #0A1622; background: #07182B; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #F4F7FB; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #0B2A4A; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #0B2A4A; border-bottom: 1px solid #D6E0EC; padding-bottom: 4px; }
+  .meta { color: #5C6470; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #D6E0EC; vertical-align: top; }
+  th { background: #DCEBFA; font-weight: 600; }
+  a { color: #0E7A6E; }
+  code { background: #DCEBFA; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9FC4E6; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; CargoLink</h1>
+<p class="meta">Last updated: 31 May 2026 (v1.0)</p>
+
+<h2>What this app is (and is not)</h2>
+<p>CargoLink is an independent <em>directory and shipping helper</em> that gathers the world&rsquo;s most well-known cargo, courier, postal, freight-forwarding, ocean-line and air-cargo companies in one place and helps you reach them quickly. The app adds its own native features: a step-by-step origin&rarr;destination shipping wizard that suggests carriers for your chosen lane, a searchable carrier directory with category filters and on-device starred favourites, a universal tracking entry that hands your tracking number to the carrier&rsquo;s own tracking page, a side-by-side carrier comparison, and an offline shipping guide. When you open a carrier, its own public website loads inside a standard in-app browser, and you can hand the page off to your phone&rsquo;s default browser at any time with &ldquo;Open in browser&rdquo;. <strong>CargoLink is not affiliated with, endorsed by, or sponsored by any of the companies it links to</strong> (including DHL, FedEx, UPS, TNT, Aramex, USPS, Royal Mail, Canada Post, Australia Post, China Post, SF Express, J&amp;T Express, DPD, GLS, Evri, PostNL, La Poste, Deutsche Post, Correos, Japan Post, Yamato, Blue Dart, Delhivery, DTDC, India Post, Saudi Post, Emirates Post, Naqel, AJEX, Zajil, iMile, Fetchr, Posta Plus, Agility, GAC, Almajdouie, Bahri, Milaha, ZIM, Etihad Cargo, Saudia Cargo, Turkish Cargo, Maersk, MSC, CMA CGM, Hapag-Lloyd, COSCO, Evergreen, ONE, Yang Ming, HMM, PIL, Wan Hai, Matson, DB Schenker, Kuehne+Nagel, DSV, CEVA, Expeditors, Nippon Express, Kerry Logistics, Sinotrans, C.H. Robinson, XPO, Nova Poshta, CDEK, PostNord, Bring, Swiss Post, Poste Italiane, Cainiao, 4PX, YunExpress, ZTO, YTO, Flash Express, Kerry Express, GHN, Viettel Post, LBC, JNE, SiCepat, TCS, Leopards, The Courier Guy, RAM, GIG Logistics, NIPOST, Posta Kenya, Africa Global Logistics, and any other). All company names and trademarks belong to their respective owners; the in-app tiles use neutral monogram chips, not company logos.</p>
+
+<h2>What this app collects</h2>
+<p><strong>CargoLink does not collect any personal information from you.</strong> There are no user accounts, no sign-in, and no server we control that stores your activity.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Contacts, camera, microphone</td><td>No &mdash; the app does not request these permissions</td><td>&mdash;</td></tr>
+    <tr><td>Chosen origin / destination countries</td><td>Only the last country codes you select in the wizard (e.g. <code>US</code>, <code>SA</code>)</td><td>App-private SharedPreferences on this device only</td></tr>
+    <tr><td>Saved carriers</td><td>Only which of the built-in carriers you tap the star icon on (stored as short IDs)</td><td>App-private SharedPreferences on this device only</td></tr>
+    <tr><td>Tracking number you type</td><td>Used at typing time to build the carrier&rsquo;s own tracking URL and open it in the in-app browser. The number is sent to that carrier&rsquo;s servers the same way it would be from any web browser; CargoLink does not keep a tracking history of its own.</td><td>&mdash;</td></tr>
+    <tr><td>Pages you open in the in-app browser</td><td>Loaded directly from the carrier&rsquo;s own website; the app does not log, read, or transmit your browsing</td><td>Standard WebView cache on your device (clearable in Android settings)</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>How the in-app browser works</h2>
+<p>Tapping a carrier &mdash; to open its website to ship, or to track a parcel &mdash; opens that carrier&rsquo;s own public website inside Android&rsquo;s standard WebView component, scoped to the URL you selected. The page is served directly by the carrier &mdash; the same content you would get by typing the address into any browser. CargoLink does <strong>not</strong> inject scripts into those pages, and does <strong>not</strong> read your cookies, login credentials, session tokens, or the content you submit on them. For sign-in, booking, or any flow involving payment, we recommend using the &ldquo;Open in browser&rdquo; button so the flow runs in your full system browser, where the third-party site&rsquo;s own privacy policy applies.</p>
+
+<h2>Advertising (Google AdMob)</h2>
+<p>CargoLink shows ads to keep the app free. Ads are served by Google&rsquo;s <a href="https://policies.google.com/technologies/ads">AdMob</a> SDK, which is integrated as a library inside the app. When AdMob is active it may collect or use certain device-level information, depending on whether you consent (in the EEA / UK / Switzerland) and on Google&rsquo;s own policies:</p>
+<ul>
+  <li>Advertising ID (a resettable, device-level identifier you can change at any time in Android &gt; Settings &gt; Privacy &gt; Ads).</li>
+  <li>IP address and approximate location derived from it.</li>
+  <li>App interactions used to limit ad frequency and measure ad performance.</li>
+</ul>
+<p>The app does not perform user tracking across other apps or websites that we own. To learn more or change your choices, please see Google&rsquo;s privacy notice at <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a> and the device-level controls under Android &gt; Settings &gt; Privacy &gt; Ads.</p>
+
+<h2>EEA / UK / Switzerland consent (UMP)</h2>
+<p>If you are located in the European Economic Area, the United Kingdom, or Switzerland, on first launch the app shows a Google User Messaging Platform (UMP) consent form so you can manage how AdMob personalizes ads. Your choice is stored locally by the UMP SDK and is respected by the app when loading ads. You can reopen these choices any time from the app&rsquo;s &ldquo;Privacy options&rdquo; menu where required.</p>
+
+<h2>Permissions used</h2>
+<table>
+  <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td><code>INTERNET</code></td><td>Loading carrier websites in the in-app browser, sending tracking numbers to those carriers, and serving AdMob ads.</td></tr>
+    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Detecting whether you are online so the app can show an offline screen instead of failing silently.</td></tr>
+  </tbody>
+</table>
+
+<h2>Children</h2>
+<p>CargoLink is a general-audience logistics directory and is not directed at children under 13. It does not knowingly collect personal data from children. If you believe a child has used the app and provided personal information through a third-party site you reached from the app, please contact that site directly under its own privacy policy.</p>
+
+<h2>Internet required</h2>
+<p>CargoLink needs an internet connection to load carrier pages and to keep the app free with ads. When offline, the app shows a &ldquo;You&rsquo;re offline&rdquo; screen and does not enable the directory.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this privacy policy, email <a href="mailto:moebahlawan87@gmail.com">moebahlawan87@gmail.com</a>.</p>
+</main>
+<footer>&copy; 2026 Developers MR &middot; CargoLink</footer>
+</body>
+</html>
