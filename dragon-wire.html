@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Dragon Wire</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #14202c; background: #0e2a4e; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #f6f4ec; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #13497e; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #13497e; border-bottom: 1px solid #d6e1ee; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #d6e1ee; vertical-align: top; }
+  th { background: #e3ecf6; font-weight: 600; }
+  a { color: #13497e; }
+  code { background: #e3ecf6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9fbedd; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; Dragon Wire</h1>
+<p class="meta">Last updated: 31 May 2026 (v1.0)</p>
+
+<h2>What this app is (and is not)</h2>
+<p>Dragon Wire is an independent <em>China news reader and outlet directory</em>. It pulls publicly available news feeds (Google News&rsquo; China editions, scoped to whichever of the app&rsquo;s 12 interface languages you choose) so you can browse China-focused headlines by topic &mdash; Top, China, World, Business, Tech, Sport, Culture and Science. It also offers a curated directory of China&rsquo;s most-read news websites (Xinhua, People&rsquo;s Daily, CCTV, China Daily, Sina, Sohu, NetEase, Tencent News, Baidu, Toutiao, Phoenix/iFeng, The Paper, Caixin, Yicai, CGTN, Global Times, Sixth Tone, SCMP and others), each of which opens in Android&rsquo;s Chrome Custom Tabs. <strong>Dragon Wire is not affiliated with, endorsed by, or sponsored by any of the outlets, agencies, or platforms it links to.</strong> All names, logos and trademarks belong to their respective owners; the app reproduces no logos &mdash; only plain colour swatches.</p>
+
+<h2>What this app collects</h2>
+<p><strong>Dragon Wire does not collect any personal information from you.</strong> There are no user accounts, no sign-in, and no server we control that stores your activity.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Contacts, camera, microphone, storage</td><td>No &mdash; the app does not request these permissions</td><td>&mdash;</td></tr>
+    <tr><td>Your chosen language, dark-theme setting, and saved (bookmarked) articles</td><td>Saved on your device so your preferences and bookmarks persist between launches</td><td>Android <code>SharedPreferences</code> on your device only; never sent to any server we control</td></tr>
+    <tr><td>The topic you last viewed</td><td>Held in memory while the app runs so the feed reloads where you left off</td><td>Device memory only</td></tr>
+    <tr><td>Headlines you choose to summarise or translate with the optional AI tools</td><td>The headline text is sent to the Pollinations.ai endpoint (a third-party AI service) to generate a summary, translation, or digest</td><td>Pollinations.ai processes the request and returns a response; please review their terms before using these optional features</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>How the news works</h2>
+<p>Headlines, sources, dates and article links come from public RSS feeds &mdash; specifically Google News&rsquo; China editions for your selected language and topic. Dragon Wire fetches those feeds directly from <code>news.google.com</code>, parses the XML on your device, and lists the items. Tapping a headline, or any outlet in the directory, opens it in <strong>Chrome Custom Tabs</strong>, which loads the publisher&rsquo;s own page from the publisher&rsquo;s own server &mdash; the same content you would get by typing the URL into Chrome. Dragon Wire does <strong>not</strong> wrap those sites in a hidden WebView, does <strong>not</strong> inject scripts into them, and does <strong>not</strong> read your cookies, login credentials, or session tokens. Outside the app, each site&rsquo;s and Chrome&rsquo;s own privacy policies apply.</p>
+
+<h2>The optional AI features</h2>
+<p>The &ldquo;AI summary&rdquo;, &ldquo;Translate&rdquo; and &ldquo;Daily digest&rdquo; tools send a short, news-only prompt (a headline you tap, or the list of currently shown headlines) to the public <a href="https://text.pollinations.ai/">Pollinations.ai</a> text endpoint to generate a brief, neutral summary, a translation, or a digest. No identifier of yours is attached. The prompt that Dragon Wire sends instructs the AI to stay factual and neutral, not to invent quotes or statistics, and to avoid harmful, explicit, or defamatory content. Generated text is always clearly labelled as AI-generated and carrying a &ldquo;may be inaccurate &mdash; verify with the source&rdquo; notice. The first uses are free; further uses require watching an optional rewarded ad. If you never tap an AI button, nothing is ever sent.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required to fetch news feeds, open pages in Chrome Custom Tabs, request ads, and run the optional AI features. The app shows a &ldquo;No internet connection&rdquo; screen when there is no connection.</li>
+</ul>
+<p>The app does <strong>not</strong> request contacts, location, microphone, camera, storage, exact-alarms, foreground-services, or any other sensitive permission.</p>
+
+<h2>Advertising</h2>
+<p>Dragon Wire shows ads provided by <strong>Google AdMob</strong> in four formats: banner (a small strip pinned to the bottom), interstitial (an occasional full-screen ad after several link opens, paced gently), app-open (a full-screen ad when you bring the app back to the foreground &mdash; never on the first launch, per Play policy), and rewarded (an optional full-screen ad you choose to watch to unlock additional uses of the AI tools). Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) and you can re-open the consent form from <em>Settings &rarr; Privacy options</em>.</p>
+
+<h2>Content disclaimer</h2>
+<p>Headlines and article excerpts are produced by the third-party outlets Dragon Wire links to. Their accuracy, framing, and editorial decisions are entirely those outlets&rsquo; responsibility &mdash; Dragon Wire does not edit them beyond grouping by topic and language. AI-generated summaries, translations and digests are best-effort and may contain errors; always read the original article at the source.</p>
+
+<h2>Children</h2>
+<p>Dragon Wire is intended for a general news audience. The AdMob ad content is mixed-audience and news content is chosen by third-party outlets, so the app is not designed specifically for children.</p>
+
+<h2>Trademark notice</h2>
+<p>Xinhua, People&rsquo;s Daily, CCTV, China Daily, China News Service, Guangming Daily, Sina, Sohu, NetEase, Tencent News, Baidu, Toutiao, Phoenix/iFeng, The Paper, Guancha, Weibo, Caixin, Yicai, Cailianshe, Economic Observer, Securities Times, CGTN, Global Times, Sixth Tone, ECNS, SHINE, South China Morning Post, HK01, Ta Kung Pao, Jiemian, NBD, Henan Daily, Google News, Pollinations.ai and all other named brands are trademarks of their respective owners. Their inclusion is nominative &mdash; Dragon Wire helps you reach those public feeds and sites and is not affiliated with, endorsed by, or sponsored by any of them.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
