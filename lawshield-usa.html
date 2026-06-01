@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; LawShield USA</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #0F172A; background: #070C1A; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #FAF7F2; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #0F172A; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #0F172A; border-bottom: 1px solid #E1DEC6; padding-bottom: 4px; }
+  .meta { color: #5C6470; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #E1DEC6; vertical-align: top; }
+  th { background: #EDE5D3; font-weight: 600; }
+  a { color: #0F172A; }
+  code { background: #EDE5D3; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .warn { background: #FFF6E6; border-left: 4px solid #C8A14A; padding: 10px 14px; margin: 12px 0; border-radius: 6px; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #C8A14A; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; LawShield USA</h1>
+<p class="meta">Last updated: 1 June 2026 (v1.0)</p>
+
+<h2>What this app is (and is not)</h2>
+<p>LawShield USA is an independent, educational US legal-information hub. It bundles plain-language case-type guides, a 50-state + DC directory of free public legal-aid resources, a statute-of-limitations reference, a plain-language legal glossary, an AI legal-information assistant, and a list of national crisis hotlines into one app.</p>
+
+<div class="warn"><strong>LawShield USA is NOT a law firm, lawyer-referral business, lead-generation service, or legal advice provider.</strong> Using the app does not create an attorney-client relationship with anyone. The links it shows are all to free public bar associations, federally-funded legal aid organizations (such as those listed by the Legal Services Corporation), court-system self-help portals, and national crisis hotlines. We do not receive a referral fee from any of these.</div>
+
+<h2>What this app collects</h2>
+<p><strong>LawShield USA does not collect any personal information from you.</strong> There are no user accounts, no sign-in, and no server we control that stores your activity.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, phone, address, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location, contacts, camera, microphone</td><td>No &mdash; the app does not request these permissions</td><td>&mdash;</td></tr>
+    <tr><td>Case details, court documents, attorney information</td><td>No &mdash; the app never asks you to upload documents</td><td>&mdash;</td></tr>
+    <tr><td>Your chosen home state (e.g. &ldquo;CA&rdquo;)</td><td>Only the two-letter code you pick</td><td>App-private SharedPreferences on this device only</td></tr>
+    <tr><td>First-launch disclaimer acknowledgment</td><td>A single boolean flag</td><td>App-private SharedPreferences on this device only</td></tr>
+    <tr><td>AI assistant prompts</td><td>Sent to a third-party text-generation service (Pollinations) to produce the answer; not stored by us. PII patterns (SSN, credit-card-shaped numbers, phone, email, long case numbers) are auto-redacted before sending.</td><td>Not stored by us. Treat any prompt as if it could be logged by the upstream provider.</td></tr>
+    <tr><td>Crash logs / analytics / usage telemetry</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+<p>Everything else is on-device. The app never uploads which case-type cards you opened, which glossary terms you searched, or which state-bar links you tapped. If you uninstall the app, your data is removed by Android along with it.</p>
+
+<h2>AI Legal Assistant &mdash; what happens to your prompt</h2>
+<p>When you type a question in the AI Legal Assistant and tap &ldquo;Ask&rdquo;, the app first runs a local pre-flight: it scans the text for obvious personally-identifying patterns (Social Security number, credit-card-shaped number, phone number, email address, long case/docket numbers) and replaces them with <code>[REDACTED]</code>. It also blocks requests that read as instructions for illegal activity (witness intimidation, evidence destruction, forging documents, etc.). The redacted, screened text is then sent over HTTPS to <a href="https://pollinations.ai">Pollinations</a>, a third-party text-generation service, to produce the educational reply. We do not control or log requests on the Pollinations side; please review their own policies. We strongly recommend you do not type Social Security numbers, full case numbers, full names of other parties, or other sensitive details into the prompt &mdash; redaction is a safety net, not a guarantee.</p>
+
+<h2>Advertising (Google AdMob)</h2>
+<p>LawShield USA shows ads to keep the app free. Ads are served by Google&rsquo;s <a href="https://policies.google.com/technologies/ads">AdMob</a> SDK, which is integrated as a library inside the app. When AdMob is active it may collect or use certain device-level information, depending on whether you consent (in the EEA / UK / Switzerland) and on Google&rsquo;s own policies:</p>
+<ul>
+  <li>Advertising ID (a resettable, device-level identifier you can change any time in Android &gt; Settings &gt; Privacy &gt; Ads).</li>
+  <li>IP address and approximate location derived from it.</li>
+  <li>App interactions used to limit ad frequency and measure ad performance.</li>
+</ul>
+<p>The app does not perform user tracking across other apps or websites that we own. To learn more or change your choices, please see Google&rsquo;s privacy notice at <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a> and the device-level controls under Android &gt; Settings &gt; Privacy &gt; Ads. The text you type into the AI prompt is <strong>never</strong> shared with the ad network &mdash; AdMob runs in its own scope and receives only what its SDK collects directly from the device.</p>
+
+<h2>EEA / UK / Switzerland consent (UMP)</h2>
+<p>If you are located in the European Economic Area, the United Kingdom, or Switzerland, on first launch the app shows a Google User Messaging Platform (UMP) consent form so you can manage how AdMob personalizes ads. Your choice is stored locally by the UMP SDK and is respected by the app when loading ads. You can reopen these choices any time from <em>Settings &rarr; Manage ad-consent preferences</em>.</p>
+
+<h2>Optional rewarded ads</h2>
+<p>One feature &mdash; &ldquo;Deep mode&rdquo; for the AI Legal Assistant, which produces a longer, more thorough educational answer &mdash; is unlocked after you choose to watch a short rewarded video ad. The unlock is optional; you can use the regular AI mode and every other section of the app without watching a rewarded ad.</p>
+
+<h2>Permissions used</h2>
+<table>
+  <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td><code>INTERNET</code></td><td>Required by Google AdMob to load ads, by UMP to fetch the consent form, and by the AI Legal Assistant to reach Pollinations.</td></tr>
+    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Detecting whether you are online so the app can show an offline screen instead of failing silently.</td></tr>
+  </tbody>
+</table>
+
+<h2>Children</h2>
+<p>LawShield USA is a general-audience educational legal-information app and is not directed at children under 13. It does not knowingly collect personal data from children.</p>
+
+<h2>Educational use only &mdash; NOT legal advice</h2>
+<div class="warn"><strong>Read this carefully.</strong> The case-type guides, statute-of-limitations approximations, glossary entries, state-bar links, lawyer-finder links, and AI Legal Assistant answers are all <em>general legal information</em>. They are NOT legal advice. They do NOT establish an attorney-client relationship. Laws change and vary by state. Filing-deadline numbers shown in the app are approximate and may not apply to your sub-type of case. Always consult a licensed attorney in your state for advice about your specific situation. If you are in immediate danger or facing a crime, call 911.</div>
+
+<h2>Internet required</h2>
+<p>LawShield USA needs an internet connection so that AdMob can load ads, the UMP consent form can be fetched when applicable, and the AI Legal Assistant can reach the Pollinations service. When offline, the app shows a &ldquo;You&rsquo;re offline&rdquo; screen.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this privacy policy, email <a href="mailto:moebahlawan87@gmail.com">moebahlawan87@gmail.com</a>.</p>
+</main>
+<footer>&copy; 2026 Developers MR &middot; LawShield USA</footer>
+</body>
+</html>
