@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; AutoInsure USA</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #f4f6fa; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #0e1923; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #0e1923; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #b89000; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #fff8db; border-left: 4px solid #ffd45a; padding: 10px 14px; margin: 1em 0; border-radius: 0 6px 6px 0; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; AutoInsure USA</h1>
+<p class="meta">Last updated: 01 June 2026</p>
+
+<div class="disclaimer"><strong>Important:</strong> AutoInsure USA is an <em>educational</em> tool. The estimator outputs are <strong>not insurance quotes</strong>, the AI guidance is <strong>not legal or insurance advice</strong>, and the app is not licensed as an insurance producer, broker, or agent in any US state. Always confirm specifics with your state Department of Insurance or a licensed agent before purchasing, switching, or filing a claim.</div>
+
+<h2>About this app</h2>
+<p>AutoInsure USA helps US drivers understand car insurance. It provides: a state-aware monthly premium estimator, a coverage-tier comparator, a 50-state minimum-limits reference, an AI claim helper for next-step guidance, an AI policy-clause explainer, a glossary of common auto-insurance terms, and a directory of major US carriers that opens their official quote pages in your browser. Everything except the AI calls runs entirely on your device.</p>
+
+<h2>What we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Estimator inputs (state, age bracket, driving-record category, vehicle class, coverage level, deductible)</td><td>You enter them locally to drive the calculator</td><td>App memory only &mdash; never sent to our servers</td></tr>
+    <tr><td>Free-text questions you type into the AI Claim Helper or Policy Explainer</td><td>Sent to the AI provider (after PII auto-redaction &mdash; see below)</td><td>Not stored on our servers</td></tr>
+    <tr><td>Names, addresses, VIN, license plate, SSN, credit card, phone, email</td><td><strong>Never</strong> &mdash; the app auto-redacts these patterns from any AI prompt before it leaves your device</td><td>&mdash;</td></tr>
+    <tr><td>Crash logs / analytics SDK</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Name, email, account creation</td><td>No &mdash; the app has no accounts or sign-in</td><td>&mdash;</td></tr>
+    <tr><td>Location / GPS</td><td>No &mdash; the app never requests location</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>AI generation (Pollinations) &amp; PII protection</h2>
+<p>The two AI tools (Claim Helper, Policy Explainer) send your typed question over HTTPS to <a href="https://pollinations.ai">Pollinations</a>, our text-generation provider. <strong>Before sending, the app automatically scrubs:</strong></p>
+<ul>
+  <li>Social Security number patterns (e.g. <code>123-45-6789</code>)</li>
+  <li>Credit-card-length digit sequences (13&ndash;19 digits)</li>
+  <li>US phone numbers</li>
+  <li>Email addresses</li>
+  <li>Postal-style street addresses</li>
+</ul>
+<p>We do not attach your name, device ID, advertising ID, or any account identifier to the AI request. We have no servers; we do not keep a copy of the prompt or the response. AI responses are streamed back to your device and displayed in-app only.</p>
+<p><strong>System prompt:</strong> the AI is instructed to (a) speak in plain English with US examples, (b) always note that the answer is educational and not insurance or legal advice, (c) never invent specific carrier quotes, premium amounts, or claim numbers, (d) ignore any sensitive details a user might include and answer the general question, (e) refuse to help with insurance fraud &mdash; staged crashes, faked injuries, or misleading an adjuster.</p>
+
+<h2>Premium estimator &mdash; how it works</h2>
+<p>The estimator runs a small multiplier formula on your device. A national baseline of $150/month for full coverage is multiplied by 2024&ndash;2025 publicly-available aggregate factors (state cost of insurance from Bankrate / ZebraInsurance / Insurance.com; demographic and vehicle-class factors from the same public sources). The output is shown as a range of monthly and annual figures, labelled an educational estimate. It is not bound to any insurer&rsquo;s actual underwriting and your real quote depends on your exact ZIP, credit score (in most states), vehicle VIN and model year, mileage, and the specific carrier.</p>
+
+<h2>50-state minimums data source</h2>
+<p>State minimum required liability limits, no-fault status, and uninsured motorist rules are taken from each state&rsquo;s Department of Insurance or DMV public summaries, rounded to the standard <em>per-person / per-accident / property-damage</em> reporting format (e.g. 25/50/25 = $25,000 BI per person / $50,000 BI per accident / $25,000 property damage). State laws change &mdash; always confirm current minimums with your state DOI before relying on them.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required for AI generation, opening carrier websites, and ad serving.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, camera, notifications, SMS, or storage.</p>
+
+<h2>Advertising</h2>
+<p>AutoInsure USA shows ads provided by <strong>Google AdMob</strong>. Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) to gather consent, and sets <code>npa=1</code> (non-personalized ads) by default so it stays compliant with GDPR / UK GDPR / CCPA. You can re-open the privacy-options form any time from Settings.</p>
+
+<h2>Carrier links</h2>
+<p>The Top Carriers screen opens each carrier&rsquo;s official quote page in your phone&rsquo;s browser (Chrome Custom Tabs). AutoInsure USA is independent &mdash; we do not act as a broker, do not receive a referral fee, and do not transmit any of your input to those carriers. What happens on a carrier&rsquo;s own site is governed by that carrier&rsquo;s privacy policy, not ours.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a &ldquo;family&rdquo; app on Google Play.</p>
+
+<h2>Disclaimer (repeated, because it matters)</h2>
+<p>AutoInsure USA provides <strong>educational estimates and AI guidance only</strong>. Nothing in the app is an insurance quote, an offer of coverage, professional insurance advice, legal advice, or financial advice. The developer is not licensed as an insurance producer, broker, or agent. The AI Claim Helper cannot review your specific policy, dispute denials, or speak to an adjuster on your behalf. Always consult a licensed insurance agent in your US state before purchasing, switching, or relying on any policy &mdash; and if you have a serious claim dispute, consult a licensed attorney.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
