@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; RealEstate USA</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #faf6ee; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #7a2e1f; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #7a2e1f; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #b25538; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #fbf1e6; border-left: 4px solid #b25538; padding: 10px 14px; margin: 1em 0; border-radius: 0 6px 6px 0; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; RealEstate USA</h1>
+<p class="meta">Last updated: 01 June 2026</p>
+
+<div class="disclaimer"><strong>Important:</strong> RealEstate USA is an <em>educational</em> calculator and AI explainer. Calculator results are not mortgage quotes; AI answers are not legal, tax, or financial advice. The developer is not a licensed real-estate agent, broker, lender, attorney, or tax professional in any US state. Always consult licensed professionals before signing any contract or relying on any number this app produces.</div>
+
+<h2>About this app</h2>
+<p>RealEstate USA helps US consumers learn about homebuying through five on-device calculators (Mortgage, Affordability, Rent vs Buy, Closing Costs, Home Equity &amp; HELOC) and a plain-English AI Realtor that answers general questions about US real estate. All calculators run entirely on your device.</p>
+
+<h2>What we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Calculator inputs (home price, income, monthly debts, rate, term, etc.)</td><td>You type them into the calculators</td><td>App memory only &mdash; never sent to our servers</td></tr>
+    <tr><td>Last-picked US state preference</td><td>Yes</td><td>On-device SharedPreferences (<code>realestate_prefs</code>)</td></tr>
+    <tr><td>Free-text questions you type into the AI Realtor</td><td>Sent to the AI provider (after PII auto-redaction &mdash; see below)</td><td>Not stored on our servers</td></tr>
+    <tr><td>Social Security / driver&rsquo;s license / credit card / bank account numbers</td><td><strong>Never</strong> &mdash; the app auto-redacts these from AI prompts before they leave your device</td><td>&mdash;</td></tr>
+    <tr><td>Crash logs / analytics SDK</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Name, email, account creation</td><td>No &mdash; the app has no accounts or sign-in</td><td>&mdash;</td></tr>
+    <tr><td>Location / contacts / photos / microphone / camera</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>AI generation (Pollinations) &amp; PII protection</h2>
+<p>The AI Realtor sends your typed question over HTTPS to <a href="https://pollinations.ai">Pollinations</a>, our text-generation provider. <strong>Before sending, the app automatically scrubs:</strong></p>
+<ul>
+  <li>Social Security number patterns (e.g. <code>123-45-6789</code>)</li>
+  <li>Credit-card-length digit sequences (13&ndash;19 digits)</li>
+  <li>Phone numbers</li>
+  <li>Email addresses</li>
+  <li>Routing / account number patterns</li>
+</ul>
+<p>We do not attach your name, device ID, advertising ID, or any account identifier to the AI request. We have no servers; we do not keep a copy of the prompt or the response.</p>
+<p><strong>System prompt:</strong> the AI is instructed to (a) answer in plain English with US examples, (b) always lead with the disclaimer that the answer is educational only and not legal/tax/financial advice, (c) refuse and call out any request that discriminates by race / religion / national origin / sex / familial status / disability (Fair Housing Act), any request to falsify income or employment (loan fraud), and any predatory practice, (d) never invent specific lender names, current rates, or guaranteed approval odds.</p>
+
+<h2>Calculators &mdash; how they work</h2>
+<p>Each calculator runs a small formula on your device using your inputs and educational state-level factors (median home price, effective property tax rate, typical homeowners-insurance cost per $1,000 of dwelling coverage, and typical buyer-side closing percent). State factors are rounded approximations sourced from public 2024&ndash;2025 averages (US Census ACS, Federal Reserve, Tax Foundation, NAIC, MBA). They are not bound to any lender&rsquo;s actual rates, taxes, or insurance quotes. Output is rounded to whole-dollar monthly and total figures and labelled as an <strong>educational estimate</strong>.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required for the AI Realtor, the consent form, and ad serving. The app shows a &ldquo;no internet&rdquo; screen when offline.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, camera, notifications, SMS, storage, or telephone state.</p>
+
+<h2>Advertising</h2>
+<p>RealEstate USA shows ads provided by <strong>Google AdMob</strong>. Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) to gather consent, and sets <code>npa=1</code> (non-personalized ads) by default so it stays compliant with GDPR / UK GDPR / CCPA. You can re-open the privacy-options form any time from Settings.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a &ldquo;family&rdquo; app on Google Play.</p>
+
+<h2>Disclaimer (repeated, because it matters)</h2>
+<p>RealEstate USA provides <strong>educational estimates and AI explanations only</strong>. Nothing in the app is a mortgage quote, an offer of credit, professional real-estate advice, legal advice, tax advice, or financial advice. The developer is not licensed as a real-estate agent, broker, lender, attorney, or tax professional. Always consult licensed professionals in your US state before making any real-estate, mortgage, or refinancing decision.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
