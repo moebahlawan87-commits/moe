@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; MortgageMate USA</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #f4f6fa; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #111c30; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #111c30; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #b91c1c; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #fff5f5; border-left: 4px solid #b91c1c; padding: 10px 14px; margin: 1em 0; border-radius: 0 6px 6px 0; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; MortgageMate USA</h1>
+<p class="meta">Last updated: 02 June 2026</p>
+
+<div class="disclaimer"><strong>Important:</strong> MortgageMate USA is an <em>educational</em> tool. The calculator outputs are <strong>not pre-approvals, rate locks, or offers of credit</strong>, the AI guidance is <strong>not legal, financial, or mortgage advice</strong>, and the app is not licensed as a mortgage lender, broker, or financial advisor in any US state. Always confirm specifics with a licensed lender before buying, refinancing, or making any commitment.</div>
+
+<h2>About this app</h2>
+<p>MortgageMate USA helps US homebuyers understand mortgages. It provides: an affordability calculator (28/36 DTI heuristic), a side-by-side comparator of the 7 main US loan types (Conventional/FHA/VA/USDA/Jumbo/ARM/15-yr), a full PITI monthly-payment calculator with PMI, a year-by-year amortization schedule with a balance-decay chart, a closing-cost estimator, a refinance break-even calculator, a 50-state effective property-tax reference, a 32-term glossary, an AI mortgage Q&A, and a directory of top US lenders that opens their official sites in your browser. Everything except the AI Q&A runs entirely on your device.</p>
+
+<h2>What we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Calculator inputs (income, debts, down payment, rate, term, tax rate, insurance cost, home price, current loan balance, etc.)</td><td>You enter them locally to drive the calculators</td><td>App memory only &mdash; never sent to our servers</td></tr>
+    <tr><td>Free-text questions you type into the AI Mortgage Q&A</td><td>Sent to the AI provider (after PII auto-redaction &mdash; see below)</td><td>Not stored on our servers</td></tr>
+    <tr><td>Names, addresses, SSN, credit card, phone, email, long account numbers</td><td><strong>Never</strong> &mdash; the app auto-redacts these patterns from any AI prompt before it leaves your device</td><td>&mdash;</td></tr>
+    <tr><td>Crash logs / analytics SDK</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Name, email, account creation</td><td>No &mdash; the app has no accounts or sign-in</td><td>&mdash;</td></tr>
+    <tr><td>Location / GPS</td><td>No &mdash; the app never requests location</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>AI generation (Pollinations) &amp; PII protection</h2>
+<p>The AI Mortgage Q&A sends your typed question over HTTPS to <a href="https://pollinations.ai">Pollinations</a>, our text-generation provider. <strong>Before sending, the app automatically scrubs:</strong></p>
+<ul>
+  <li>Social Security number patterns (e.g. <code>123-45-6789</code>)</li>
+  <li>Credit-card-length digit sequences (13&ndash;19 digits)</li>
+  <li>Long generic IDs / account numbers (9&ndash;12 digits)</li>
+  <li>US phone numbers</li>
+  <li>Email addresses</li>
+  <li>Postal-style street addresses</li>
+</ul>
+<p>We do not attach your name, device ID, advertising ID, or any account identifier to the AI request. We have no servers; we do not keep a copy of the prompt or the response. AI responses are streamed back to your device and displayed in-app only.</p>
+<p><strong>System prompt:</strong> the AI is instructed to (a) speak in plain English with US examples (FHA, VA, USDA, conventional, jumbo), (b) always note that the answer is educational and not legal/financial/mortgage advice, (c) never invent specific lender rates, lender pre-approvals, or loan-officer quotes, (d) ignore any sensitive details a user might include and answer the general question, (e) refuse to help with mortgage fraud &mdash; fake income, straw buyers, hidden debts, occupancy fraud, or any misstatement on a US mortgage application (which is a federal crime, 18 U.S.C. § 1014).</p>
+
+<h2>Affordability and payment math &mdash; how it works</h2>
+<p>The Affordability calculator applies the standard 28/36 DTI heuristic on your gross monthly income: housing payment (PITI) capped at 28% of gross AND all monthly debt capped at 36% of gross. It solves the home price for which the resulting PITI matches the tighter cap. The Payment calculator runs a standard monthly-compounding mortgage formula plus property tax (state effective rate × home price), homeowners insurance (annualized ÷ 12), and PMI (0.85% annualized for LTV above 80%). The Amortization schedule iterates each month and rolls up to year-by-year rows. None of these reflect any specific lender's underwriting &mdash; real qualification depends on your exact credit score, DTI, employment history, cash reserves, the property appraisal, and the lender's policies on the day of lock.</p>
+
+<h2>50-state property tax data source</h2>
+<p>Effective annual property-tax rates by state are aggregated from public 2024-2025 sources (Tax Foundation, ATTOM Data, US Census Bureau). They are <em>statewide averages</em> &mdash; real rates are set at the COUNTY and MUNICIPAL level and vary widely within a state. Always confirm with the county tax assessor for the specific address you're considering.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required for AI generation, opening lender websites, and ad serving.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, camera, notifications, SMS, or storage.</p>
+
+<h2>Advertising</h2>
+<p>MortgageMate USA shows ads provided by <strong>Google AdMob</strong>. Google's advertising SDK collects and processes limited data &mdash; for example, your device's advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google's policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google's Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google's User Messaging Platform (UMP) to gather consent, and sets <code>npa=1</code> (non-personalized ads) by default so it stays compliant with GDPR / UK GDPR / CCPA. You can re-open the privacy-options form any time from Settings.</p>
+<p>The AI's "Deep mode" is gated behind a <strong>rewarded</strong> ad: you choose to watch a short video to unlock a longer, more detailed answer. You can always use the AI in standard mode without an ad.</p>
+
+<h2>Lender links</h2>
+<p>The Top Lenders screen opens each lender's official site in your phone's browser (Chrome Custom Tabs). MortgageMate USA is independent &mdash; we do not act as a broker, do not receive a referral fee, and do not transmit any of your input to those lenders. What happens on a lender's own site is governed by that lender's privacy policy, not ours.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a "family" app on Google Play.</p>
+
+<h2>Disclaimer (repeated, because it matters)</h2>
+<p>MortgageMate USA provides <strong>educational calculators and AI guidance only</strong>. Nothing in the app is a pre-approval, rate lock, offer of credit, professional mortgage advice, legal advice, or financial advice. The developer is not licensed as a mortgage lender, broker, or financial advisor. The AI Mortgage Q&A cannot pre-approve you, lock a rate, or commit any lender. Always consult a licensed mortgage lender in your US state before purchasing, refinancing, or signing anything &mdash; and if you have a complex tax or legal question about your home purchase, consult a licensed CPA or attorney.</p>
+
+<h2>Mortgage fraud is a federal crime</h2>
+<p>Misstating income, employment, debts, occupancy intent, or any other material fact on a US mortgage application is a federal crime under 18 U.S.C. § 1014 (false statements to influence a federally-insured lender). The AI Q&A refuses requests for fake pay stubs, straw-buyer schemes, hidden-debt advice, or occupancy fraud by design. If your real numbers don't qualify you for the loan you want, the right move is to legitimately improve your DTI, credit score, or down payment &mdash; the app's Affordability tool will tell you which lever helps most.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
