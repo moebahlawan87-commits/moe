@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; MediCare Navigator USA</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #f4f6fa; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #132040; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #132040; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #dc143c; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #fff5f5; border-left: 4px solid #dc143c; padding: 10px 14px; margin: 1em 0; border-radius: 0 6px 6px 0; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; MediCare Navigator USA</h1>
+<p class="meta">Last updated: 02 June 2026</p>
+
+<div class="disclaimer"><strong>Important:</strong> MediCare Navigator USA is an <em>educational</em> tool. The explanations, calculators, comparisons, and AI guidance shown here are <strong>not enrollment, plan recommendations, or offers of coverage</strong>. The app is not licensed as an insurance broker, SHIP counselor, or CMS official. Always confirm specifics with Medicare.gov, 1-800-MEDICARE, or your state SHIP office (free 1-on-1 counseling) before enrolling, disenrolling, or making any commitment.</div>
+
+<h2>About this app</h2>
+<p>MediCare Navigator USA helps US seniors and caregivers understand Medicare. It provides: a Parts A/B/C/D reference, 5 eligibility paths (age, SSDI, ESRD, ALS, spouse), a 2025 cost reference + IRMAA premium calculator, an Original-vs-Medicare-Advantage comparator, all 6 enrollment windows (IEP/AEP/SEP/GEP/MA-OEP/Medigap-OE), a coverage reference (what's covered, what's not, 5 common surprises), 5 Medicare Advantage plan types (HMO/PPO/PFFS/SNP/MSA), 8 Medigap supplement letter plans, the 6 2025 IRMAA brackets, a ~35-term glossary, and an AI Q&A. Everything except the AI Q&A runs entirely on your device.</p>
+
+<h2>What we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Calculator inputs (MAGI, filing status)</td><td>You enter them locally to drive the IRMAA calculator</td><td>App memory only &mdash; never sent to our servers</td></tr>
+    <tr><td>Free-text questions you type into the AI Q&A</td><td>Sent to the AI provider (after PII auto-redaction &mdash; see below)</td><td>Not stored on our servers</td></tr>
+    <tr><td>Names, addresses, SSN, MBI (Medicare Beneficiary Identifier), credit card, phone, email, long account IDs</td><td><strong>Never</strong> &mdash; the app auto-redacts these patterns from any AI prompt before it leaves your device</td><td>&mdash;</td></tr>
+    <tr><td>Crash logs / analytics SDK</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Name, email, account creation</td><td>No &mdash; the app has no accounts or sign-in</td><td>&mdash;</td></tr>
+    <tr><td>Location / GPS</td><td>No &mdash; the app never requests location</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>AI generation (Pollinations) &amp; PII protection</h2>
+<p>The AI Q&A sends your typed question over HTTPS to <a href="https://pollinations.ai">Pollinations</a>, our text-generation provider. <strong>Before sending, the app automatically scrubs:</strong></p>
+<ul>
+  <li>Social Security number patterns (e.g. <code>123-45-6789</code>)</li>
+  <li>Medicare Beneficiary Identifier patterns (e.g. <code>1AB2-CD3-EF4</code>)</li>
+  <li>Credit-card-length digit sequences (13&ndash;19 digits)</li>
+  <li>Long generic IDs / account numbers</li>
+  <li>US phone numbers</li>
+  <li>Email addresses</li>
+  <li>Postal-style street addresses</li>
+</ul>
+<p>We do not attach your name, device ID, advertising ID, or any account identifier to the AI request. We have no servers; we do not keep a copy of the prompt or the response. AI responses are streamed back to your device and displayed in-app only.</p>
+<p><strong>System prompt:</strong> the AI is instructed to (a) speak in plain English with US examples (Parts A/B/C/D, Medigap letter plans, IRMAA, IEP/AEP/SEP/GEP), (b) always note that the answer is educational and not insurance/legal/medical advice, (c) never invent specific premiums, plan availability, or coverage decisions for a beneficiary's ZIP, (d) ignore any sensitive details a user might include and answer the general question, (e) refuse to help with Medicare fraud &mdash; fake disability, MBI misuse, lying about residency/income, forging records (42 U.S.C. § 1320a-7b is a federal crime), and direct users to legitimate paths like Medicaid dual-eligibility, Medicare Savings Programs, Extra Help (LIS), and SHIP counseling.</p>
+
+<h2>2025 costs &amp; IRMAA data source</h2>
+<p>Standard 2025 Medicare costs (premiums, deductibles, MOOP cap, Part D out-of-pocket cap) and the 6 IRMAA brackets are taken from the CMS-published 2025 figures. The Part B premium calculator uses these brackets and your input MAGI (modified adjusted gross income). SSA always uses your IRS-reported MAGI from 2 YEARS prior to determine your IRMAA tier &mdash; that 2-year lookback is built into the explanation. If you had a Life-Changing Event, the app explains the SSA-44 appeal path. Verify your specific IRMAA on Medicare.gov.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required for AI generation, opening Medicare.gov links, and ad serving.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, camera, notifications, SMS, or storage.</p>
+
+<h2>Advertising</h2>
+<p>MediCare Navigator USA shows ads provided by <strong>Google AdMob</strong>. Google's advertising SDK collects and processes limited data &mdash; for example, your device's advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google's policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google's Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google's User Messaging Platform (UMP) to gather consent, and sets <code>npa=1</code> (non-personalized ads) by default so it stays compliant with GDPR / UK GDPR / CCPA. You can re-open the privacy-options form any time from Settings.</p>
+<p>The AI's "Deep mode" is gated behind a <strong>rewarded</strong> ad: you choose to watch a short video to unlock a longer, more detailed answer. You can always use the AI in standard mode without an ad.</p>
+
+<h2>External links</h2>
+<p>The app opens external resources (Medicare.gov, shiphelp.org, etc.) in your phone's browser (Chrome Custom Tabs). MediCare Navigator USA is independent &mdash; we do not act as a broker, do not receive a referral fee, and do not transmit any of your input to those destinations.</p>
+
+<h2>Children</h2>
+<p>This app is targeted at US adults (the Medicare-eligible population is 65+ or disabled); it is not directed at children and is not classified as a "family" app on Google Play.</p>
+
+<h2>Disclaimer (repeated, because it matters)</h2>
+<p>MediCare Navigator USA provides <strong>educational reference material and AI guidance only</strong>. Nothing in the app is enrollment, a plan recommendation, an offer of coverage, professional insurance advice, legal advice, financial advice, or medical advice. The developer is not licensed as an insurance broker, SHIP counselor, CMS official, or healthcare provider. The AI Q&A cannot enroll you, compare specific plans in your ZIP, appeal an IRMAA decision, or speak to CMS or an insurer on your behalf. Always consult Medicare.gov, 1-800-MEDICARE, your state SHIP office (free), or a licensed Medicare insurance broker before enrolling, switching, or relying on any plan.</p>
+
+<h2>Medicare fraud is a federal crime</h2>
+<p>Submitting false information to qualify for Medicare benefits, using another person's MBI, lying about residency or income, forging medical records, or any kind of identity misuse is a federal crime under 42 U.S.C. § 1320a-7b. The AI Q&A refuses requests for these by design. If you don't think you qualify, ask the AI about legitimate paths instead: Medicaid dual-eligibility, Medicare Savings Programs (QMB / SLMB / QI / QDWI), Extra Help / LIS for Part D, or free SHIP counseling in your state.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
