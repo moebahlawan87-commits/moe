@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Portraify</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #eef5f4; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #0e2b29; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #0e2b29; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #18a999; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #e6f7f3; border-left: 4px solid #18b5a0; padding: 10px 14px; margin: 1em 0; border-radius: 0 6px 6px 0; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; Portraify</h1>
+<p class="meta">Last updated: 04 June 2026</p>
+
+<div class="disclaimer"><strong>Your photos stay on your device.</strong> Portraify&rsquo;s Headshot Studio processes the photo you choose <em>entirely on your device</em>. Your photo is never uploaded to us or to any third party. The optional AI Portrait feature generates a brand-new image from a text description only &mdash; it does not use, upload, or look at your photo.</div>
+
+<h2>About this app</h2>
+<p>Portraify turns a photo you already have into a polished professional headshot. The <strong>Headshot Studio</strong> uses on-device machine learning (Google ML Kit, bundled in the app) to separate you from your background, places you on a studio backdrop, applies a professional color look, and auto-frames the result on your face &mdash; all locally, with no network. The separate <strong>AI Portrait</strong> tool generates a fresh, AI-created portrait concept from a short text description you build with chips (subject, attire, setting, style); this is an illustration, not a photo of you.</p>
+
+<h2>What we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>The photo you pick from your gallery or capture with the camera</td><td>Used on your device to build your headshot</td><td>On your device only &mdash; processed locally, never sent to our servers or any third party</td></tr>
+    <tr><td>Headshots / portraits you save</td><td>Only when you tap Save</td><td>Saved to your device gallery (Pictures/Portraify)</td></tr>
+    <tr><td>The text description you build in AI Portrait (e.g. &ldquo;business suit, modern office&rdquo;)</td><td>Sent to the AI image provider to generate a picture</td><td>Not stored on our servers (we have none)</td></tr>
+    <tr><td>Your face data / biometric templates</td><td><strong>No</strong> &mdash; face/segmentation detection runs on-device and is used only to frame and cut out the current image; nothing is stored or transmitted</td><td>&mdash;</td></tr>
+    <tr><td>Name, email, account creation</td><td>No &mdash; the app has no accounts or sign-in</td><td>&mdash;</td></tr>
+    <tr><td>Location / GPS, contacts, microphone</td><td>No &mdash; never requested</td><td>&mdash;</td></tr>
+    <tr><td>Crash logs / analytics SDK</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>On-device photo processing</h2>
+<p>The Headshot Studio relies on Google&rsquo;s ML Kit Selfie Segmentation and Face Detection models, which are bundled inside the app and run <strong>offline on your device</strong>. Your photo is decoded into memory, edited (background swap, color grade, crop), and shown back to you. It is not uploaded anywhere. If you close the app without saving, the working image is discarded. Temporary files used for sharing are written to the app&rsquo;s private cache only and are not visible to other apps.</p>
+
+<h2>AI Portrait generation</h2>
+<p>If you use the optional AI Portrait tool, the short text description you assemble is sent over HTTPS to a third-party text-to-image service (<a href="https://huggingface.co">Hugging Face</a> Inference, with <a href="https://pollinations.ai">Pollinations</a> as a fallback) which returns a generated picture. <strong>No photo of you is ever sent</strong> &mdash; only the text prompt. We do not attach your name, device ID, advertising ID, or any account identifier to the request, and we keep no copy of the prompt or the image. A built-in safety filter blocks requests for explicit, harmful, or otherwise prohibited content before anything leaves your device. The generated image is an AI illustration and is labelled as such in the app.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Camera</strong> (optional) &mdash; only used when you choose &ldquo;Take a photo.&rdquo; The photo is handed straight to the on-device studio.</li>
+  <li><strong>Photos / media access</strong> &mdash; you pick a single photo through Android&rsquo;s system photo picker; the app sees only the image you select.</li>
+  <li><strong>Internet / network state</strong> &mdash; required for ad serving, the optional AI Portrait generator, and opening this privacy policy.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, or all-files storage access.</p>
+
+<h2>Advertising</h2>
+<p>Portraify shows ads provided by <strong>Google AdMob</strong>. Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) to gather consent and stays compliant with GDPR / UK GDPR / CCPA. You can re-open the privacy-options form any time from Settings. Some optional features (saving in HD, generating an AI portrait) are gated behind a rewarded ad.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a &ldquo;family&rdquo; app on Google Play.</p>
+
+<h2>Data deletion</h2>
+<p>Because Portraify keeps no account and stores nothing on a server, there is no remote data to delete. Headshots you saved live in your device gallery and can be removed there. Clearing the app&rsquo;s storage (Android Settings &rarr; Apps &rarr; Portraify &rarr; Storage) removes its cache and local data.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
