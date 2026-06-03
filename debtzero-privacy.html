@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; DebtZero USA</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #f4f6fa; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #141327; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #141327; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #3a9a3a; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #f1fbe0; border-left: 4px solid #8fd33f; padding: 10px 14px; margin: 1em 0; border-radius: 0 6px 6px 0; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; DebtZero USA</h1>
+<p class="meta">Last updated: 03 June 2026</p>
+
+<div class="disclaimer"><strong>Important:</strong> DebtZero USA is an <em>educational</em> tool. The payoff projections, credit and consolidation calculators, and AI coach are <strong>not financial, credit, or legal advice</strong>. The app is not a lender, debt-settlement firm, credit-repair organization, or licensed financial advisor. Always confirm balances, rates, and terms with your creditor, and consider free nonprofit credit counseling (<a href="https://www.nfcc.org">nfcc.org</a>) before making major decisions.</div>
+
+<h2>About this app</h2>
+<p>DebtZero USA helps US consumers plan getting out of debt. It provides: a debt tracker, a debt-payoff planner that compares the snowball and avalanche methods with extra-payment projections, a credit-utilization calculator with score-factor education, a consolidation comparator (consolidation loan vs. 0% balance transfer), an AI debt coach for general guidance, and a plain-English glossary. Every calculation runs entirely on your device; only the AI coach makes a network call.</p>
+
+<h2>What we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Debts you enter (name, balance, APR, minimum payment) and calculator inputs</td><td>You enter them locally to drive the planner</td><td>On your device only (local app storage) &mdash; never sent to our servers</td></tr>
+    <tr><td>Free-text questions you type into the AI Debt Coach or AI consolidation explainer</td><td>Sent to the AI provider (after PII auto-redaction &mdash; see below)</td><td>Not stored on our servers</td></tr>
+    <tr><td>Names, addresses, SSN, credit-card numbers, phone, email</td><td><strong>Never</strong> &mdash; the app auto-redacts these patterns from any AI prompt before it leaves your device</td><td>&mdash;</td></tr>
+    <tr><td>Crash logs / analytics SDK</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Name, email, account creation</td><td>No &mdash; the app has no accounts or sign-in</td><td>&mdash;</td></tr>
+    <tr><td>Location / GPS</td><td>No &mdash; the app never requests location</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>AI generation (Pollinations) &amp; PII protection</h2>
+<p>The AI tools send your typed question over HTTPS to <a href="https://pollinations.ai">Pollinations</a>, our text-generation provider. <strong>Before sending, the app automatically scrubs:</strong></p>
+<ul>
+  <li>Social Security number patterns (e.g. <code>123-45-6789</code>)</li>
+  <li>Credit-card-length digit sequences (16 digits)</li>
+  <li>US phone numbers</li>
+  <li>Email addresses</li>
+  <li>Postal-style street addresses</li>
+</ul>
+<p>We do not attach your name, device ID, advertising ID, or any account identifier to the AI request. We have no servers; we do not keep a copy of the prompt or the response. AI responses are returned to your device and displayed in-app only.</p>
+<p><strong>System prompt:</strong> the AI is instructed to (a) speak in plain English with US examples, (b) always note that the answer is educational and not financial, credit, or legal advice, (c) favor proven, free strategies and warn about scams (advance-fee &ldquo;credit repair&rdquo;, CPNs, harmful debt-settlement), (d) ignore any sensitive details a user might include and answer the general question, (e) refuse to help with credit or lending fraud &mdash; hiding assets from creditors, faking income, synthetic-identity / CPN schemes, or deceiving a lender.</p>
+
+<h2>Payoff &amp; calculators &mdash; how they work</h2>
+<p>The payoff planner simulates your debts month by month on your device: it accrues monthly interest from the APR you enter, applies your minimum payments, and funnels any extra payment into the priority debt (highest APR for avalanche, smallest balance for snowball), rolling each freed payment forward. The credit and consolidation tools use standard amortization and utilization formulas. All outputs are educational estimates based solely on the figures you enter &mdash; your real results depend on your actual balances, rates, fees, and payment timing.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required for the AI coach, opening the privacy policy link, and ad serving.</li>
+</ul>
+<p>The app does <strong>not</strong> request location, contacts, microphone, camera, notifications, SMS, or storage.</p>
+
+<h2>Advertising</h2>
+<p>DebtZero USA shows ads provided by <strong>Google AdMob</strong>. Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) to gather consent and stays compliant with GDPR / UK GDPR / CCPA. You can re-open the privacy-options form any time from Settings. Some optional features (such as revealing the full payoff order or running the AI coach) are gated behind a rewarded ad.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children under 13 and is not classified as a &ldquo;family&rdquo; app on Google Play.</p>
+
+<h2>Disclaimer (repeated, because it matters)</h2>
+<p>DebtZero USA provides <strong>educational estimates and AI guidance only</strong>. Nothing in the app is financial advice, credit-repair services, a loan offer, debt-settlement, or legal advice. The developer is not a lender, broker, credit-repair organization, or licensed financial advisor, and the app cannot access your real accounts or credit report. Always confirm details with your creditor, consider free nonprofit credit counseling (nfcc.org), and consult a licensed professional or attorney before making major debt decisions.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
