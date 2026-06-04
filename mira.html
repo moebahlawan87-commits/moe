@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Mira</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c1733; background: #f4f2fb; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #6d3fd6; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #6d3fd6; border-bottom: 1px solid #e8e5f2; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  .alert { background: #fbf4ff; border: 1px solid #e3cdf5; border-radius: 8px; padding: 12px 16px; margin: 1em 0; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e8e5f2; vertical-align: top; }
+  th { background: #f3f0fb; font-weight: 600; }
+  a { color: #6d3fd6; }
+  code { background: #f3f0fb; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; Mira</h1>
+<p class="meta">Last updated: 4 June 2026 (v1.0)</p>
+
+<p>Mira is an AI-companion chat app. You choose a fictional AI companion (such as Nova, Sage, Pixel, or Bloom) and have a friendly, text-based conversation. This policy explains exactly what the app does and does not do with your data.</p>
+
+<div class="alert">
+<strong>Mira&rsquo;s companions are AI, not real people.</strong> Every companion is a fictional persona powered by a large language model. Replies are AI-generated and may be inaccurate. Mira is for light, safe-for-work conversation only &mdash; it is not a therapist, doctor, or advisor, and it is not a romantic, explicit, or adult-content service. If you are in crisis, call your local emergency number, dial or text <strong>988</strong> (US Suicide &amp; Crisis Lifeline), text <strong>HOME</strong> to <strong>741741</strong>, or find a helpline at <a href="https://findahelpline.com">findahelpline.com</a>.
+</div>
+
+<h2>What this app collects</h2>
+<p><strong>Mira does not collect any personal information from you.</strong> There are no user accounts; the app never asks for your name or email and does not store your data on a server we control.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Contacts, photos, microphone, camera</td><td>No &mdash; the app does not request any of these permissions</td><td>&mdash;</td></tr>
+    <tr><td>Your conversations with companions</td><td>Saved locally on your device only</td><td>App-private storage (Android <code>SharedPreferences</code>)</td></tr>
+    <tr><td>The messages you type to a companion</td><td>Sent as plain text to the third-party AI provider to generate a reply</td><td>Not retained by the app once the reply comes back</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>How AI replies are generated</h2>
+<p>When you send a message, the app sends a short plain-text prompt &mdash; the companion&rsquo;s persona description plus your recent messages in that conversation &mdash; to <a href="https://huggingface.co">Hugging Face</a>&rsquo;s Inference API (<code>router.huggingface.co</code>), with <a href="https://pollinations.ai">Pollinations</a> as a fallback text provider. The provider returns the reply, which the app shows on screen.</p>
+<p>No photo, contact, location, or device identifier is sent &mdash; only the plain text needed to continue the conversation. Your saved conversations stay on your device; you can delete any conversation at any time with <em>Clear conversation</em> inside a chat.</p>
+
+<h2>Content-safety screening</h2>
+<p>Before any message is sent to the AI provider, Mira screens it on your device. Messages containing crisis or self-harm language are <strong>not</strong> sent to the AI &mdash; instead the app shows a supportive message with helpline resources. Sexual or other not-safe-for-work requests are declined in-character and are not sent to the AI. This screening happens locally and is not logged or transmitted.</p>
+
+<h2>AI-generated content disclosure</h2>
+<p>Companion replies are produced by a third-party large language model. AI can be inaccurate, incomplete, or occasionally generate plausible-sounding but wrong content. <strong>Mira is for entertainment and friendly conversation only and is not a substitute for professional medical, psychological, legal, or financial advice.</strong> The developer is not responsible for outcomes resulting from following AI-generated content. On first launch you must acknowledge that companions are AI, and you can report inappropriate AI output at any time from a chat&rsquo;s menu (<em>Report a message</em>) or from <em>Settings &rarr; Report content</em>.</p>
+
+<h2>Network connections</h2>
+<p>The internet is used for: (1) Google AdMob to load ads (see &ldquo;Advertising&rdquo; below), and (2) sending your message to the AI provider when you chat. The app requires an active internet connection to open &mdash; you will see a &ldquo;You&rsquo;re offline&rdquo; screen when no connection is available.</p>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; required to request ads and to call the AI text provider.</li>
+</ul>
+<p>The app does <strong>not</strong> request photo, contacts, location, microphone, camera, notifications, health sensors, or any other sensitive permission.</p>
+
+<h2>Advertising</h2>
+<p>Mira shows ads provided by <strong>Google AdMob</strong> in these formats: banner (a small strip on the companion gallery), interstitial (an occasional full-screen ad after several actions), and app-open (a full-screen ad when you bring the app back to the foreground; never on first cold start). Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example, your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads. This is governed by Google&rsquo;s policies:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+</ul>
+<p>If you live in a region where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform (UMP) to gather consent or to serve non-personalized ads, so it stays compliant with GDPR / UK GDPR / CCPA. You can reopen these choices any time from <em>Settings &rarr; Privacy choices</em>.</p>
+
+<h2>Children</h2>
+<p>Mira is intended for users aged 13 and older. It is not classified as a &ldquo;family&rdquo; app on Google Play, and the AdMob ad content is mixed-audience. It is not designed for children.</p>
+
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact the developer through the Google Play listing.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
