@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Mundo</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c1b2e; background: #f5f3fb; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #e94458; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #141233; border-bottom: 1px solid #ece9f5; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  .alert { background: #fff4f5; border: 1px solid #f6cdd3; border-radius: 8px; padding: 12px 16px; margin: 1em 0; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ece9f5; vertical-align: top; }
+  th { background: #fbf0f2; font-weight: 600; }
+  a { color: #e94458; }
+  code { background: #f3f0fb; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; Mundo</h1>
+<p class="meta">Last updated: 5 June 2026 (v1.0)</p>
+
+<p>Mundo (&ldquo;the app&rdquo;, &ldquo;we&rdquo;) is a cross-country dating app that lets adults meet people across countries, cultures and languages. This policy explains what we collect, why, where it is stored, and the choices you have.</p>
+
+<div class="alert">
+<strong>Mundo is strictly for adults aged 18 and over.</strong> We collect your date of birth at sign-up to verify your age and do not knowingly allow or keep accounts of anyone under 18. Suspected underage accounts are removed. If you are in immediate danger, contact your local emergency services.
+</div>
+
+<h2>Information we collect</h2>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where / why</th></tr></thead>
+  <tbody>
+    <tr><td>Email address &amp; authentication record</td><td>Yes, at sign-up</td><td>Google Firebase Authentication &mdash; to create and secure your account</td></tr>
+    <tr><td>Profile: name, date of birth/age, gender, bio, home &amp; current country, languages, dating preferences, interests</td><td>Yes, you provide these</td><td>Google Cloud Firestore &mdash; to build and show your profile</td></tr>
+    <tr><td>Profile photos</td><td>Yes, the ones you choose</td><td>Stored (compressed) in our Firestore database; visible to other members as part of your public profile</td></tr>
+    <tr><td>Activity: swipes (likes/passes), matches, chat messages</td><td>Yes</td><td>Firestore &mdash; so matching and messaging work</td></tr>
+    <tr><td>Reports &amp; blocks you submit</td><td>Yes</td><td>Firestore &mdash; for safety and moderation review</td></tr>
+    <tr><td>Precise GPS location</td><td>No &mdash; the app does not request location permission</td><td>&mdash; (&ldquo;country&rdquo; is simply what you choose in your profile)</td></tr>
+    <tr><td>Advertising identifier &amp; basic diagnostic data</td><td>Yes, by Google AdMob</td><td>Used to show and measure ads (see &ldquo;Advertising&rdquo;)</td></tr>
+    <tr><td>Push notification token</td><td>Yes</td><td>Firebase Cloud Messaging &mdash; to notify you of new matches and messages</td></tr>
+  </tbody>
+</table>
+
+<h2>How we use your information</h2>
+<ul>
+  <li>To create and operate your account and profile.</li>
+  <li>To show you potential matches and let you and your matches message each other.</li>
+  <li>To keep the community safe &mdash; age enforcement, moderation, blocking, reporting and fraud prevention.</li>
+  <li>To show advertising that keeps the app free, subject to your consent where required.</li>
+</ul>
+
+<h2>Photos &amp; inappropriate-content screening</h2>
+<p>Your profile photos are part of your public profile and are visible to other Mundo members in discovery and chat. When you add a photo, the image is first sent to an automated image-moderation model hosted by <a href="https://huggingface.co">Hugging Face</a> to check that it is not explicit (nudity / sexual content); photos that fail this check are rejected and not uploaded. Accepted photos are compressed and stored in our database. Our moderators can remove any photo or account that breaks our guidelines.</p>
+
+<h2>Service providers we share data with</h2>
+<p>Your public profile (name, age, photos, country, bio, interests) is visible to other Mundo users. We use the following providers as data processors:</p>
+<ul>
+  <li><strong>Google Firebase</strong> (Authentication, Firestore database, Cloud Messaging) &mdash; hosts your account, profile, photos and messages. See <a href="https://firebase.google.com/support/privacy">Firebase&rsquo;s privacy information</a>.</li>
+  <li><strong>Google AdMob</strong> &mdash; advertising. See <a href="https://policies.google.com/privacy">Google&rsquo;s Privacy Policy</a>.</li>
+  <li><strong>Google User Messaging Platform</strong> &mdash; to gather ad-consent where required.</li>
+  <li><strong>Hugging Face</strong> &mdash; runs the automatic photo-moderation check described above.</li>
+</ul>
+<p>We do <strong>not</strong> sell your personal data.</p>
+
+<h2>Advertising</h2>
+<p>Mundo shows ads from <strong>Google AdMob</strong> (banner, occasional full-screen interstitial, and an optional rewarded ad you choose to watch). Google&rsquo;s advertising SDK collects and processes limited data &mdash; for example your device&rsquo;s advertising identifier and approximate IP-based location &mdash; to serve and measure ads, governed by <a href="https://policies.google.com/privacy">Google&rsquo;s policies</a>. If you live where consent is required (the EEA, UK, Switzerland, or a US state with applicable privacy law), the app uses Google&rsquo;s User Messaging Platform to gather consent or serve non-personalized ads (GDPR / UK GDPR / CCPA). You can reopen these choices from <em>Settings &rarr; Ad privacy options</em>.</p>
+
+<h2>Your choices &amp; rights</h2>
+<ul>
+  <li>Edit or remove your profile details and photos at any time in the app.</li>
+  <li>Pause your profile so you are not shown to new people (<em>Settings &rarr; Pause my profile</em>).</li>
+  <li>Block and report other users from any chat or profile &mdash; reports are confidential.</li>
+  <li>Manage ad-consent from <em>Settings &rarr; Ad privacy options</em>.</li>
+  <li><strong>Delete your account and data</strong> by contacting us (below). Deleting your account removes your profile, photos, swipes, matches and messages.</li>
+</ul>
+
+<h2>Data retention</h2>
+<p>We keep your data while your account is active. When you delete your account we delete your personal data, except limited records we must keep for safety, legal or fraud-prevention purposes.</p>
+
+<h2>Security</h2>
+<p>Data is stored on Google Cloud infrastructure with access controlled by security rules. No method of transmission or storage is 100% secure, but we take reasonable measures to protect your information.</p>
+
+<h2>Children</h2>
+<p>Mundo is for adults <strong>18 and over only</strong>. It is not directed to children and we do not knowingly collect their data.</p>
+
+<h2>Changes</h2>
+<p>We may update this policy; material changes are reflected by the &ldquo;last updated&rdquo; date above.</p>
+
+<h2>Contact</h2>
+<p>For privacy questions or to request deletion of your account and data, contact the developer through the Mundo <a href="https://play.google.com/store">Google Play listing</a>.</p>
+</main>
+<footer>Developers MR &middot; <a href="index.html">All app privacy policies</a></footer>
+</body>
+</html>
