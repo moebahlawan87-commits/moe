@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; MacroSnap</title>
+<style>
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1a1c18; background: #fbfaf5; margin: 0; padding: 24px 16px; }
+  main { max-width: 720px; margin: 0 auto; background: #ffffff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+  h1 { font-size: 1.7em; margin: 0 0 4px; color: #0e9f6e; }
+  h2 { font-size: 1.2em; margin: 1.8em 0 0.4em; color: #0e9f6e; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 0.9em; margin: 0 0 1.4em; }
+  .alert { background: #f1fbf5; border: 1px solid #b8ecd2; border-radius: 8px; padding: 12px 16px; margin: 1em 0; }
+  p, ul { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.95em; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  a { color: #0e9f6e; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { max-width: 720px; margin: 16px auto 0; text-align: center; color: #9ca3af; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy &mdash; MacroSnap</h1>
+<p class="meta">Last updated: 7 June 2026 (v1.0)</p>
+
+<p>MacroSnap is an AI calorie &amp; macro tracker. You can photograph a meal to get an estimate of its calories and macros, search a built-in food database, log meals to a daily diary, set a calorie goal, and track your weight. This policy explains exactly what the app does and does not do with your data.</p>
+
+<div class="alert">
+<strong>MacroSnap is not a medical, dietary, or health service.</strong> Calorie and macro estimates are approximate and for general wellness only. They are not a substitute for advice from a doctor or registered dietitian. If you have a medical condition or an eating disorder, please consult a qualified professional. In the US you can call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or contact the NEDA Helpline by texting <strong>&ldquo;NEDA&rdquo;</strong> to <strong>741741</strong>; elsewhere, find a helpline at <a href="https://findahelpline.com">findahelpline.com</a>.
+</div>
+
+<h2>What this app collects</h2>
+<p><strong>MacroSnap does not collect any personal information from you.</strong> There are no user accounts; the app never asks for your name or email and does not store your food log on a server we control.</p>
+<table>
+  <thead><tr><th>Data</th><th>Collected?</th><th>Stored where</th></tr></thead>
+  <tbody>
+    <tr><td>Name, email, account info</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Device location</td><td>No</td><td>&mdash;</td></tr>
+    <tr><td>Contacts</td><td>No &mdash; the app does not request this permission</td><td>&mdash;</td></tr>
+    <tr><td>Your food diary, goal/profile (sex, age, height, weight, activity), weight log, custom foods</td><td>Saved locally on your device only</td><td>App-private storage (a JSON file)</td></tr>
+    <tr><td>A food photo you take or pick</td><td>Sent to a third-party AI provider only when you choose to analyse it; not stored by us</td><td>A temporary copy may sit in the app&rsquo;s private cache and is overwritten by the next photo</td></tr>
+    <tr><td>Crash logs / analytics</td><td>No</td><td>&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2>Camera &amp; photos</h2>
+<p>When you tap <em>Snap a meal</em>, the app opens your device camera (via the system camera) or the system photo picker so you can choose a picture. MacroSnap does <strong>not</strong> request access to your full photo library or storage &mdash; the system picker hands the app only the single image you select. The captured image is downscaled on your device and sent to the AI provider to estimate nutrition; it is not uploaded anywhere else and not retained by us after the estimate is returned.</p>
+
+<h2>How AI estimates are generated</h2>
+<p>For a photo estimate, MacroSnap sends the single food image to <a href="https://huggingface.co">Hugging Face</a>&rsquo;s Inference router (<code>router.huggingface.co</code>), with <a href="https://pollinations.ai">Pollinations</a> as a fallback provider, and receives an estimated food name, calories and macros. For the optional &ldquo;describe / search&rdquo; and &ldquo;AI coach insight&rdquo; features, only the short plain text you type (or a brief, anonymous summary of your day&rsquo;s totals) is sent. No name, email, contact, location, or device identifier is sent to the AI provider.</p>
+
+<h2>On-device safety screening</h2>
+<p>Before any text you type is sent to the AI provider, MacroSnap screens it on your device for self-harm or disordered-eating language. If detected, the app does <strong>not</strong> contact the AI &mdash; instead it shows a supportive message with helpline resources. This screening happens locally and is not logged or transmitted.</p>
+
+<h2>AI-generated content disclosure</h2>
+<p>Food names, calorie and macro figures, and coaching tips produced by the AI are estimates and may be inaccurate. Always use your own judgement. You can report inappropriate or incorrect AI output from inside the app (Profile &rarr; <em>Report AI content</em>), which opens your email app to contact us.</p>
+
+<h2>Advertising</h2>
+<p>MacroSnap shows ads from <a href="https://admob.google.com">Google AdMob</a>. To comply with privacy rules, the app shows a consent request (Google&rsquo;s User Messaging Platform) where required, and you can reopen your choices any time from <em>Profile &rarr; Privacy &amp; ad consent</em>. AdMob may use your device&rsquo;s advertising ID and IP address to serve and measure ads. See <a href="https://policies.google.com/technologies/ads">Google&rsquo;s advertising policies</a> for details. Your food diary and personal data are never shared with advertisers.</p>
+
+<h2>Permissions used</h2>
+<ul>
+  <li><strong>Internet / network state</strong> &mdash; to load ads and contact the AI provider.</li>
+  <li><strong>Camera</strong> (optional, via the system camera app) &mdash; only when you choose to photograph a meal. No CAMERA permission is held by the app in the background.</li>
+</ul>
+
+<h2>Data retention &amp; deletion</h2>
+<p>Everything you log is stored only on your device. To delete all of it, clear the app&rsquo;s storage in Android Settings or uninstall MacroSnap &mdash; there is no server-side copy for us to delete.</p>
+
+<h2>Children</h2>
+<p>MacroSnap is intended for general audiences and is not directed to children under 13. We do not knowingly collect data from children.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted at this URL with a new date above.</p>
+
+<h2>Contact</h2>
+<p>Questions or requests: <a href="mailto:moebahlawan87@gmail.com">moebahlawan87@gmail.com</a>.</p>
+</main>
+<footer>&copy; 2026 DevMR &middot; MacroSnap</footer>
+</body>
+</html>
